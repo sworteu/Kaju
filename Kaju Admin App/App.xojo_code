@@ -105,29 +105,29 @@ Inherits Application
 
 	#tag MenuHandler
 		Function FileNew() As Boolean Handles FileNew.Action
-			NewDocument
-			
-			Return True
-			
+		  NewDocument
+		  
+		  Return True
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileOpen() As Boolean Handles FileOpen.Action
-			dim dlg as new OpenDialog
-			dlg.MultiSelect = true
-			dlg.PromptText = "Choose a Kaju document:"
-			
-			dim f as FolderItem = dlg.ShowModal
-			
-			if f <> nil then
-			for i as integer = 1 to dlg.Count
-			OpenDocument( dlg.Item( i - 1 ) )
-			next
-			end if
-			
-			Return True
-			
+		  dim dlg as new OpenDialog
+		  dlg.MultiSelect = true
+		  dlg.PromptText = "Choose a Kaju document:"
+		  
+		  dim f as FolderItem = dlg.ShowModal
+		  
+		  if f <> nil then
+		    for i as integer = 1 to dlg.Count
+		      OpenDocument( dlg.Item( i - 1 ) )
+		    next
+		  end if
+		  
+		  Return True
+		  
 		End Function
 	#tag EndMenuHandler
 

@@ -141,14 +141,6 @@ Inherits Kaju.Information
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
-			Name="IsValid"
-			Visible=false
-			Group="Behavior"
-			InitialValue=""
-			Type="Boolean"
-			EditorType=""
-		#tag EndViewProperty
-		#tag ViewProperty
 			Name="Left"
 			Visible=true
 			Group="Position"

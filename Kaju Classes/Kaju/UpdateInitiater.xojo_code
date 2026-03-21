@@ -201,7 +201,7 @@ Protected Class UpdateInitiater
 		    dim targetTicks as integer = Ticks + 60
 		    while Ticks < targetTicks
 		      sh.Poll
-		      App.YieldToNextThread
+		      Thread.YieldToNext
 		    wend
 		    
 		  end if
@@ -272,7 +272,7 @@ Protected Class UpdateInitiater
 		    dim targetTicks as integer = Ticks + 60
 		    while Ticks < targetTicks
 		      sh.Poll
-		      App.YieldToNextThread
+		      Thread.YieldToNext
 		    wend
 		    
 		  end if
@@ -351,7 +351,7 @@ Protected Class UpdateInitiater
 		    scriptFile.Launch
 		    dim targetTicks as integer = Ticks + 60
 		    while Ticks < targetTicks
-		      App.YieldToNextThread
+		      Thread.YieldToNext
 		    wend
 		    
 		  end if

@@ -1,9 +1,11 @@
 #tag Class
 Protected Class TextFieldChanger
-Inherits TextField
+Inherits DesktopTextField
 	#tag Event
-		Sub TextChange()
-		  self.TrueWindow.ContentsChanged = true
+		Sub TextChanged()
+		  
+		  self.Window.Changed = true
+		  
 		  RaiseEvent TextChange()
 		End Sub
 	#tag EndEvent
@@ -36,8 +38,8 @@ Inherits TextField
 			Visible=true
 			Group="Appearance"
 			InitialValue="&hFFFFFF"
-			Type="Color"
-			EditorType="Color"
+			Type="ColorGroup"
+			EditorType="ColorGroup"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="HasBorder"
@@ -137,7 +139,7 @@ Inherits TextField
 			Visible=true
 			Group="Behavior"
 			InitialValue="False"
-			Type="boolean"
+			Type="Boolean"
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
@@ -163,22 +165,6 @@ Inherits TextField
 			InitialValue=""
 			Type="Boolean"
 			EditorType=""
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="DataField"
-			Visible=true
-			Group="Database Binding"
-			InitialValue=""
-			Type="String"
-			EditorType="DataField"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="DataSource"
-			Visible=true
-			Group="Database Binding"
-			InitialValue=""
-			Type="String"
-			EditorType="DataSource"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Enabled"
@@ -321,8 +307,8 @@ Inherits TextField
 			Visible=true
 			Group="Appearance"
 			InitialValue="&h000000"
-			Type="Color"
-			EditorType="Color"
+			Type="ColorGroup"
+			EditorType="ColorGroup"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Top"

@@ -8,7 +8,7 @@
 		MacType=
 		Name=KajuDocument
 		UTI=com.mactechnologies.kajudocument
-		UTIConformsTo=,public.data
+		UTIConformsTo=, public.data
 		Description=
 		MimeType=
 		Imported=True
@@ -24,7 +24,7 @@
 		MacType=TEXT
 		Name=text/html
 		UTI=public.html
-		UTIConformsTo=,public.data
+		UTIConformsTo=, public.data
 		Description=
 		MimeType=
 		Imported=True
@@ -40,7 +40,7 @@
 		MacType=????
 		Name=special/any
 		UTI=
-		UTIConformsTo=,public.data
+		UTIConformsTo=, public.data
 		Description=
 		MimeType=
 		Imported=True
@@ -56,7 +56,7 @@
 		MacType=ZIP 
 		Name=application/zip
 		UTI=
-		UTIConformsTo=,public.data
+		UTIConformsTo=, public.data
 		Description=
 		MimeType=
 		Imported=True

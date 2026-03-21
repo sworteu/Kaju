@@ -24,19 +24,7 @@ Inherits Kaju.Information
 		  if not r then
 		    dim pairs() as Pair 
 		    for each binaryName as string in BinaryNames
-		      dim platform as string
-		      select case binaryName.Left( 3 )
-		      case "Mac"
-		        platform = "Mac"
-		      case "Win"
-		        platform = "Windows"
-		      case "Lin"
-		        platform = "Linux"
-		      case else
-		        raise new KajuException( "Unknown platform", CurrentMethodName )
-		      end select
-		      
-		      dim p as new Pair( binaryName, platform )
+		      dim p as new Pair( binaryName, PlatformNameForBinaryName( binaryName ) )
 		      pairs.Append p
 		    next
 		    
@@ -82,7 +70,7 @@ Inherits Kaju.Information
 
 	#tag Method, Flags = &h0
 		Shared Function BinaryNeedsExecutableName(binaryName As String) As Boolean
-		  return binaryName.Left( 3 ) <> "Mac"
+		  return PlatformNameForBinaryName( binaryName ) <> kPlatformMac
 		  
 		End Function
 	#tag EndMethod
@@ -101,7 +89,7 @@ Inherits Kaju.Information
 		  
 		  for each binaryName as string in BinaryNames
 		    if data.HasName( binaryName ) then
-		      dim executableNameRequired as boolean = binaryName.Left( 3 ) <> "Mac"
+		      dim executableNameRequired as boolean = BinaryNeedsExecutableName( binaryName )
 		      
 		      dim binary as new Kaju.BinaryInformation( executableNameRequired, data.Value( binaryName ) )
 		      Binaries.Value( binaryName ) = binary
@@ -155,7 +143,7 @@ Inherits Kaju.Information
 		Function FetchBinary(binaryName As String) As Kaju.BinaryInformation
 		  dim binary as Kaju.BinaryInformation = Binaries.Lookup( binaryName, nil )
 		  if binary is nil then
-		    dim needsExecutableName as boolean = binaryName.Left( 3 ) <> "Mac"
+		    dim needsExecutableName as boolean = BinaryNeedsExecutableName( binaryName )
 		    
 		    binary = new Kaju.BinaryInformation( needsExecutableName )
 		    Binaries.Value( binaryName ) = binary
@@ -263,6 +251,21 @@ Inherits Kaju.Information
 		  
 		  prop.Value( self ) = value
 		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h21
+		Private Shared Function PlatformNameForBinaryName(binaryName As String) As String
+		  select case binaryName.Left( 3 )
+		  case "Mac"
+		    return kPlatformMac
+		  case "Win"
+		    return kPlatformWindows
+		  case "Lin"
+		    return kPlatformLinux
+		  else
+		    raise new KajuException( "Unknown platform", CurrentMethodName )
+		  end select
+		End Function
 	#tag EndMethod
 
 
@@ -560,6 +563,15 @@ Inherits Kaju.Information
 	#tag Property, Flags = &h21, CompatibilityFlags = (TargetWeb and (Target32Bit or Target64Bit)) or  (TargetDesktop and (Target32Bit or Target64Bit)) or  (TargetIOS and (Target32Bit or Target64Bit))
 		Private ReleaseNotesSocket As Kaju.HTTPSocketAsync
 	#tag EndProperty
+
+	#tag Constant, Name = kPlatformLinux, Type = String, Dynamic = False, Default = \"Linux", Scope = Private
+	#tag EndConstant
+
+	#tag Constant, Name = kPlatformMac, Type = String, Dynamic = False, Default = \"Mac", Scope = Private
+	#tag EndConstant
+
+	#tag Constant, Name = kPlatformWindows, Type = String, Dynamic = False, Default = \"Windows", Scope = Private
+	#tag EndConstant
 
 	#tag Property, Flags = &h0
 		RequiresPayment As Boolean

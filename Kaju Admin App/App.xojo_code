@@ -1,15 +1,66 @@
 #tag Class
 Protected Class App
-Inherits Application
+Inherits DesktopApplication
 	#tag Event
-		Sub NewDocument()
+		Sub DocumentCreated()
 		  dim w as new WndAdmin
 		  w.Show
 		End Sub
 	#tag EndEvent
 
 	#tag Event
-		Sub Open()
+		Sub DocumentOpened(item As FolderItem)
+		  //
+		  // See if this document is open already
+		  //
+		  
+		  dim firstAdminWindow as WndAdmin
+		  
+		  dim lastIndex as integer = WindowCount - 1
+		  for i as integer = 0 to lastIndex
+		    
+		    dim thisWnd as DesktopWindow = WindowAt( i )
+		    
+		    if thisWnd IsA WndAdmin then
+		      
+		      dim adminWnd as WndAdmin = WndAdmin( thisWnd )
+		      
+		      if adminWnd.Document <> nil and adminWnd.Document.NativePath = item.NativePath then
+		        adminWnd.Show
+		        return
+		      end if
+		      
+		      if firstAdminWindow is nil then
+		        firstAdminWindow = adminWnd
+		      end if
+		      
+		    end if
+		  next
+		  
+		  //
+		  // If we get here, it's not already open
+		  // so see if the front window can be used
+		  //
+		  
+		  if firstAdminWindow <> nil and firstAdminWindow.Document is nil and not firstAdminWindow.Changed then
+		    //
+		    // It's an empty window
+		    //
+		    firstAdminWindow.OpenDocument( item )
+		    
+		  else
+		    //
+		    // Create a new window
+		    //
+		    dim w as new WndAdmin
+		    w.OpenDocument( item )
+		    
+		  end if
+		End Sub
+	#tag EndEvent
+
+	#tag Event
+		Sub Opening()
 		  return
 		  
 		  //
@@ -50,55 +101,6 @@ Inherits Application
 		  'MsgBox sh.ContentsOf( zipFile )
 		  
 		  
-		End Sub
-	#tag EndEvent
-
-	#tag Event
-		Sub OpenDocument(item As FolderItem)
-		  //
-		  // See if this document is open already
-		  //
-		  
-		  dim firstAdminWindow as WndAdmin
-		  
-		  dim lastIndex as integer = WindowCount - 1
-		  for i as integer = 0 to lastIndex
-		    dim thisWnd as Window = Window( i )
-		    if thisWnd IsA WndAdmin then
-		      
-		      dim adminWnd as WndAdmin = WndAdmin( thisWnd )
-		      
-		      if adminWnd.Document <> nil and adminWnd.Document.NativePath = item.NativePath then
-		        adminWnd.Show
-		        return
-		      end if
-		      
-		      if firstAdminWindow is nil then
-		        firstAdminWindow = adminWnd
-		      end if
-		      
-		    end if
-		  next
-		  
-		  //
-		  // If we get here, it's not already open
-		  // so see if the front window can be used
-		  //
-		  
-		  if firstAdminWindow <> nil and firstAdminWindow.Document is nil and not firstAdminWindow.ContentsChanged then
-		    //
-		    // It's an empty window
-		    //
-		    firstAdminWindow.OpenDocument( item )
-		    
-		  else
-		    //
-		    // Create a new window
-		    //
-		    dim w as new WndAdmin
-		    w.OpenDocument( item )
-		    
-		  end if
 		End Sub
 	#tag EndEvent
 
@@ -215,6 +217,158 @@ Inherits Application
 
 
 	#tag ViewBehavior
+		#tag ViewProperty
+			Name="Name"
+			Visible=false
+			Group="ID"
+			InitialValue=""
+			Type="String"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Index"
+			Visible=false
+			Group="ID"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Super"
+			Visible=false
+			Group="ID"
+			InitialValue=""
+			Type="String"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Left"
+			Visible=false
+			Group="Position"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Top"
+			Visible=false
+			Group="Position"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="AllowAutoQuit"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="AllowHiDPI"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="BugVersion"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Copyright"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="String"
+			EditorType="MultiLineEditor"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Description"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="String"
+			EditorType="MultiLineEditor"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="LastWindowIndex"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="MajorVersion"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="MinorVersion"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="NonReleaseVersion"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="RegionCode"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="StageCode"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Version"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="string"
+			EditorType="MultiLineEditor"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="_CurrentEventTime"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="ProcessID"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Integer"
+			EditorType=""
+		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class
 #tag EndClass

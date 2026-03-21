@@ -1,9 +1,9 @@
 #tag Class
 Protected Class CheckBoxChanger
-Inherits CheckBox
+Inherits DesktopCheckBox
 	#tag Event
-		Sub Action()
-		  self.TrueWindow.ContentsChanged = true
+		Sub ValueChanged()
+		  self.Window.Changed = true
 		  RaiseEvent Action()
 		End Sub
 	#tag EndEvent
@@ -100,22 +100,6 @@ Inherits CheckBox
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
-			Name="DataField"
-			Visible=true
-			Group="Database Binding"
-			InitialValue=""
-			Type="String"
-			EditorType="DataField"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="DataSource"
-			Visible=true
-			Group="Database Binding"
-			InitialValue=""
-			Type="String"
-			EditorType="DataSource"
-		#tag EndViewProperty
-		#tag ViewProperty
 			Name="Enabled"
 			Visible=true
 			Group="Appearance"
@@ -137,14 +121,6 @@ Inherits CheckBox
 			Group="ID"
 			InitialValue=""
 			Type="Integer"
-			EditorType=""
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="InitialParent"
-			Visible=false
-			Group=""
-			InitialValue=""
-			Type="String"
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty

@@ -1,38 +1,42 @@
-#tag Window
-Begin Window KajuUpdateWindow
-   BackColor       =   &cFFFFFF00
+#tag DesktopWindow
+Begin DesktopWindow KajuUpdateWindow
    Backdrop        =   0
-   CloseButton     =   False
+   BackgroundColor =   &cFFFFFF00
    Composite       =   True
-   Frame           =   0
+   DefaultLocation =   2
    FullScreen      =   False
-   FullScreenButton=   False
-   HasBackColor    =   False
+   HasBackgroundColor=   False
+   HasCloseButton  =   False
+   HasFullScreenButton=   False
+   HasMaximizeButton=   False
+   HasMinimizeButton=   False
+   HasTitleBar     =   True
    Height          =   600
    ImplicitInstance=   True
-   LiveResize      =   "False"
    MacProcID       =   0
-   MaxHeight       =   32000
-   MaximizeButton  =   False
-   MaxWidth        =   32000
+   MaximumHeight   =   32000
+   MaximumWidth    =   32000
    MenuBar         =   0
    MenuBarVisible  =   True
-   MinHeight       =   64
-   MinimizeButton  =   False
-   MinWidth        =   64
-   Placement       =   2
+   MinimumHeight   =   64
+   MinimumWidth    =   64
    Resizeable      =   False
    Title           =   "#KajuLocale.kWindowTitle"
+   Type            =   0
    Visible         =   True
    Width           =   800
-   Begin PushButton btnOK
-      AutoDeactivate  =   True
+   Begin DesktopButton btnOK
+      AllowAutoDeactivate=   True
+      AutoDeactivate  =   "True"
       Bold            =   False
-      ButtonStyle     =   0
+      ButtonStyle     =   "0"
       Cancel          =   False
       Caption         =   "#KajuLocale.kInstallButton"
       Default         =   True
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
       HelpTag         =   ""
       Index           =   -2147483648
@@ -44,27 +48,33 @@ Begin Window KajuUpdateWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
+      MacButtonStyle  =   0
       Scope           =   2
       TabIndex        =   2
       TabPanelIndex   =   0
       TabStop         =   True
       TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      TextSize        =   "0.0"
+      TextUnit        =   "0"
+      Tooltip         =   ""
       Top             =   555
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton btnCancel
-      AutoDeactivate  =   True
+   Begin DesktopButton btnCancel
+      AllowAutoDeactivate=   True
+      AutoDeactivate  =   "True"
       Bold            =   False
-      ButtonStyle     =   0
+      ButtonStyle     =   "0"
       Cancel          =   True
       Caption         =   "#KajuLocale.kRemindMeLaterButton"
       Default         =   False
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
       HelpTag         =   ""
       Index           =   -2147483648
@@ -76,27 +86,33 @@ Begin Window KajuUpdateWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
+      MacButtonStyle  =   0
       Scope           =   2
       TabIndex        =   3
       TabPanelIndex   =   0
       TabStop         =   True
       TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      TextSize        =   "0.0"
+      TextUnit        =   "0"
+      Tooltip         =   ""
       Top             =   555
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   150
    End
-   Begin PushButton btnSkipVersion
-      AutoDeactivate  =   True
+   Begin DesktopButton btnSkipVersion
+      AllowAutoDeactivate=   True
+      AutoDeactivate  =   "True"
       Bold            =   False
-      ButtonStyle     =   0
+      ButtonStyle     =   "0"
       Cancel          =   False
       Caption         =   "#KajuLocale.kSkipVersionButton"
       Default         =   False
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
       HelpTag         =   ""
       Index           =   -2147483648
@@ -108,25 +124,29 @@ Begin Window KajuUpdateWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
+      MacButtonStyle  =   0
       Scope           =   2
       TabIndex        =   4
       TabPanelIndex   =   0
       TabStop         =   True
       TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      TextSize        =   "0.0"
+      TextUnit        =   "0"
+      Tooltip         =   ""
       Top             =   555
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   150
    End
-   Begin Label lblMain
-      AutoDeactivate  =   True
+   Begin DesktopLabel lblMain
+      AllowAutoDeactivate=   True
+      AutoDeactivate  =   "True"
       Bold            =   True
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
       HelpTag         =   ""
       Index           =   -2147483648
@@ -145,23 +165,27 @@ Begin Window KajuUpdateWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "Untitled"
-      TextAlign       =   0
+      TextAlign       =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      TextSize        =   "0.0"
+      TextUnit        =   "0"
+      Tooltip         =   ""
       Top             =   14
       Transparent     =   True
       Underline       =   False
       Visible         =   True
       Width           =   631
    End
-   Begin Label lblSecondary
-      AutoDeactivate  =   True
+   Begin DesktopLabel lblSecondary
+      AllowAutoDeactivate=   True
+      AutoDeactivate  =   "True"
       Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   25
       HelpTag         =   ""
       Index           =   -2147483648
@@ -180,23 +204,27 @@ Begin Window KajuUpdateWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "Untitled"
-      TextAlign       =   0
+      TextAlign       =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      TextSize        =   "0.0"
+      TextUnit        =   "0"
+      Tooltip         =   ""
       Top             =   39
       Transparent     =   True
       Underline       =   False
       Visible         =   True
       Width           =   631
    End
-   Begin Label Label1
-      AutoDeactivate  =   True
+   Begin DesktopLabel Label1
+      AllowAutoDeactivate=   True
+      AutoDeactivate  =   "True"
       Bold            =   True
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
       HelpTag         =   ""
       Index           =   -2147483648
@@ -215,23 +243,27 @@ Begin Window KajuUpdateWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "#KajuLocale.kReleaseNotesLabel"
-      TextAlign       =   0
+      TextAlign       =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       TextFont        =   "SmallSystem"
-      TextSize        =   0.0
-      TextUnit        =   0
+      TextSize        =   "0.0"
+      TextUnit        =   "0"
+      Tooltip         =   ""
       Top             =   64
       Transparent     =   True
       Underline       =   False
       Visible         =   True
       Width           =   631
    End
-   Begin Label lblInstallMessage
-      AutoDeactivate  =   True
+   Begin DesktopLabel lblInstallMessage
+      AllowAutoDeactivate=   True
+      AutoDeactivate  =   "True"
       Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   30
       HelpTag         =   ""
       Index           =   -2147483648
@@ -250,19 +282,24 @@ Begin Window KajuUpdateWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "#KajuLocale.kDownloadingMessage"
-      TextAlign       =   0
+      TextAlign       =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      TextSize        =   "0.0"
+      TextUnit        =   "0"
+      Tooltip         =   ""
       Top             =   555
       Transparent     =   True
       Underline       =   False
       Visible         =   False
       Width           =   294
    End
-   Begin ProgressBar pbProgress
-      AutoDeactivate  =   True
+   Begin DesktopProgressBar pbProgress
+      Active          =   False
+      AllowAutoDeactivate=   True
+      AllowTabStop    =   True
+      AutoDeactivate  =   "True"
       Enabled         =   True
       Height          =   20
       HelpTag         =   ""
@@ -275,16 +312,22 @@ Begin Window KajuUpdateWindow
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      Maximum         =   100
+      Maximum         =   "100"
+      MaximumValue    =   100
+      PanelIndex      =   0
       Scope           =   2
       TabIndex        =   8
       TabPanelIndex   =   0
-      TabStop         =   True
+      Tooltip         =   ""
       Top             =   555
       Transparent     =   False
       Value           =   0.0
       Visible         =   False
       Width           =   117
+      _mIndex         =   0
+      _mInitialParent =   ""
+      _mName          =   ""
+      _mPanelIndex    =   0
    End
    Begin Kaju.ZipShell shZipper
       Arguments       =   ""
@@ -303,12 +346,13 @@ Begin Window KajuUpdateWindow
       TabPanelIndex   =   0
       TimeOut         =   0
    End
-   Begin HTMLViewer hvNewWindow
+   Begin DesktopHTMLViewer hvNewWindow
       AutoDeactivate  =   True
       Enabled         =   True
       Height          =   200
       HelpTag         =   ""
       Index           =   -2147483648
+      InitialParent   =   ""
       Left            =   -345
       LockBottom      =   False
       LockedInPosition=   True
@@ -320,16 +364,19 @@ Begin Window KajuUpdateWindow
       TabIndex        =   9
       TabPanelIndex   =   0
       TabStop         =   True
+      Tooltip         =   ""
       Top             =   119
       Visible         =   False
       Width           =   300
    End
-   Begin Label lblVersions
-      AutoDeactivate  =   True
+   Begin DesktopLabel lblVersions
+      AllowAutoDeactivate=   True
+      AutoDeactivate  =   "True"
       Bold            =   True
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
       HelpTag         =   ""
       Index           =   -2147483648
@@ -348,23 +395,27 @@ Begin Window KajuUpdateWindow
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "#KajuLocale.kVersionsLabel"
-      TextAlign       =   0
+      TextAlign       =   "0"
+      TextAlignment   =   0
       TextColor       =   &c00000000
       TextFont        =   "SmallSystem"
-      TextSize        =   0.0
-      TextUnit        =   0
+      TextSize        =   "0.0"
+      TextUnit        =   "0"
+      Tooltip         =   ""
       Top             =   64
       Transparent     =   True
       Underline       =   False
       Visible         =   True
       Width           =   117
    End
-   Begin PopupMenu pumUpdates
-      AutoDeactivate  =   True
+   Begin DesktopPopupMenu pumUpdates
+      AllowAutoDeactivate=   True
+      AutoDeactivate  =   "True"
       Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
       HelpTag         =   ""
       Index           =   -2147483648
@@ -372,19 +423,21 @@ Begin Window KajuUpdateWindow
       InitialValue    =   "updates"
       Italic          =   False
       Left            =   36
-      ListIndex       =   0
+      ListIndex       =   "0"
       LockBottom      =   False
       LockedInPosition=   True
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
       Scope           =   2
+      SelectedRowIndex=   -1
       TabIndex        =   11
       TabPanelIndex   =   0
       TabStop         =   True
       TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      TextSize        =   "0.0"
+      TextUnit        =   "0"
+      Tooltip         =   ""
       Top             =   87
       Transparent     =   False
       Underline       =   False
@@ -404,18 +457,20 @@ Begin Window KajuUpdateWindow
    Begin Kaju.HTTPSocketAsync hsSocket
       AllowCertificateValidation=   False
       Enabled         =   True
+      FollowRedirects =   False
       HTTPStatusCode  =   0
       Index           =   -2147483648
       LockedInPosition=   False
       Scope           =   2
       TabPanelIndex   =   0
    End
-   Begin HTMLViewer hvNotes
+   Begin DesktopHTMLViewer hvNotes
       AutoDeactivate  =   True
       Enabled         =   True
       Height          =   445
       HelpTag         =   ""
       Index           =   -2147483648
+      InitialParent   =   ""
       Left            =   149
       LockBottom      =   False
       LockedInPosition=   True
@@ -427,16 +482,17 @@ Begin Window KajuUpdateWindow
       TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
+      Tooltip         =   ""
       Top             =   84
       Visible         =   True
       Width           =   631
    End
 End
-#tag EndWindow
+#tag EndDesktopWindow
 
 #tag WindowCode
 	#tag Event
-		Sub Close()
+		Sub Closing()
 		  if CurrentStage = Stage.Cancelled then
 		    for each f as FolderItem in DeleteOnCancel
 		      Kaju.DeleteRecursive( f )
@@ -453,7 +509,7 @@ End
 	#tag EndEvent
 
 	#tag Event
-		Sub Open()
+		Sub Opening()
 		  #if not TargetMacOS then
 		    //
 		    // Switch the buttons around for other platforms
@@ -481,7 +537,7 @@ End
 	#tag EndEvent
 
 	#tag Event
-		Sub Paint(g As Graphics, areas() As REALbasic.Rect)
+		Sub Paint(g As Graphics, areas() As Rect)
 		  //
 		  // Draw a border around the release notes (Mac only)
 		  //
@@ -594,17 +650,17 @@ End
 		  // the pop-up menu or the Window won't draw
 		  // correctly.
 		  //
-		  pumUpdates.DeleteAllRows
+		  pumUpdates.RemoveAllRows
 		  
 		  for i as integer = 0 to Updates.Ubound
 		    dim update as Kaju.UpdateInformation = updates( i )
 		    pumUpdates.AddRow update.Version
-		    pumUpdates.RowTag( i ) = update
+		    pumUpdates.RowTagAt( i ) = update
 		  next
 		  
-		  pumUpdates.ListIndex = 0
+		  pumUpdates.SelectedRowIndex = 0
 		  
-		  if updates.Ubound = 0 then
+		  if updates.LastIndex = 0 then
 		    //
 		    // Only one update so hide the menu
 		    //
@@ -646,7 +702,7 @@ End
 		  // Set up the main labels
 		  //
 		  AppName = update.AppName
-		  if pumUpdates.ListCount = 1 then
+		  if pumUpdates.RowCount = 1 then
 		    lblSecondary.Text = KajuLocale.kSecondaryNoticeOne
 		    lblSecondary.Text = lblSecondary.Text.ReplaceAll( KajuLocale.kNewVersionMarker, update.Version )
 		  else
@@ -687,7 +743,7 @@ End
 		    SelectedBinary = nil
 		    
 		    if true then // Scope
-		      dim chosen as Kaju.UpdateInformation = pumUpdates.RowTag( pumUpdates.ListIndex )
+		      dim chosen as Kaju.UpdateInformation = pumUpdates.RowTagAt( pumUpdates.SelectedRowIndex )
 		      dim binary as Kaju.BinaryInformation = UserSelectsBinary( chosen )
 		      if binary is nil then
 		        return
@@ -808,7 +864,7 @@ End
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Sub ShowModalWithin(parentWindow As Window)
+		Private Sub ShowModalWithin(parentWindow As DesktopWindow)
 		  // Ovverride super's ShowModalWithin
 		  
 		  // Do nothing
@@ -825,14 +881,15 @@ End
 		    dlg.ActionButton.Caption = KajuLocale.kProceedButton
 		    dlg.CancelButton.Visible = true
 		    dlg.Message = KajuLocale.kPaymentRequiredMessage
-		    dim btn as MessageDialogButton = dlg.ShowModalWithin( self )
+		    dim btn as MessageDialogButton = dlg.ShowModal( self )
 		    
 		    if btn is dlg.CancelButton then
 		      return false
 		    end if
 		  end if
 		  
-		  return true
+		  Return True
+		  
 		End Function
 	#tag EndMethod
 
@@ -879,7 +936,7 @@ End
 		    dlg.CancelButton.Caption = KajuLocale.kCancelButton
 		    dlg.CancelButton.Visible = true
 		    
-		    dim btn as MessageDialogButton = dlg.ShowModalWithin( self )
+		    dim btn as MessageDialogButton = dlg.ShowModal( self )
 		    if btn is nil or btn is dlg.CancelButton then
 		      return nil
 		    elseif b32 is nil or btn is dlg.AlternateActionButton then
@@ -920,7 +977,7 @@ End
 		#tag Setter
 			Set
 			  mBackgroundImage = value
-			  self.Invalidate
+			  self.Refresh
 			End Set
 		#tag EndSetter
 		Private BackgroundImage As Picture
@@ -1019,26 +1076,26 @@ End
 
 #tag Events btnOK
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  HandleOKButton
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events btnCancel
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  self.Cancel
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events btnSkipVersion
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  //
 		  // We can only ignore versions if we already have the minimum requried
 		  //
 		  
-		  dim info as Kaju.UpdateInformation = pumUpdates.RowTag( pumUpdates.ListIndex )
+		  dim info as Kaju.UpdateInformation = pumUpdates.RowTagAt( pumUpdates.SelectedRowIndex )
 		  
 		  if info.MinimumRequiredVersion <> "" and _
 		    Kaju.VersionToDouble( Kaju.AppVersionString ) < Kaju.VersionToDouble( info.MinimumRequiredVersion ) then
@@ -1050,13 +1107,13 @@ End
 		    
 		    Checker.IgnoreVersion( info.Version )
 		    
-		    if pumUpdates.ListCount = 1 then
+		    if pumUpdates.RowCount = 1 then
 		      SelectedUpdate = nil
 		      Kaju.CancelUpdate
 		      self.Close
 		    else
-		      pumUpdates.RemoveRow( pumUpdates.ListIndex )
-		      pumUpdates.ListIndex = 0
+		      pumUpdates.RemoveRowAt( pumUpdates.SelectedRowIndex )
+		      pumUpdates.SelectedRowIndex = 0
 		    end if
 		    
 		  end if
@@ -1168,21 +1225,22 @@ End
 #tag EndEvents
 #tag Events pumUpdates
 	#tag Event
-		Sub Change()
+		Sub SelectionChanged(item As DesktopMenuItem)
+		  #Pragma Unused item
 		  //
 		  // Fill in the viewer
 		  //
 		  
 		  CurrentUpdate = nil
 		  
-		  if me.ListIndex = -1 then
-		    if me.ListCount <> 0 then
-		      me.ListIndex = 0
+		  if me.SelectedRowIndex = -1 then
+		    if me.RowCount <> 0 then
+		      me.SelectedRowIndex = 0
 		    end if
 		    return
 		  end if
 		  
-		  dim update as Kaju.UpdateInformation = me.RowTag( me.ListIndex )
+		  dim update as Kaju.UpdateInformation = me.RowTagAt( me.SelectedRowIndex )
 		  DisplayVersionInfo( update )
 		  CurrentUpdate = update
 		  
@@ -1223,7 +1281,7 @@ End
 		    return
 		  end if
 		  
-		  pbProgress.Maximum = -1
+		  pbProgress.MaximumValue = -1
 		  pbProgress.Value = 0
 		  
 		  tmrTimeout.Mode = Timer.ModeOff
@@ -1281,7 +1339,7 @@ End
 		    bytesReceived = bytesReceived \ mult
 		  end if
 		  
-		  pbProgress.Maximum = totalBytes
+		  pbProgress.MaximumValue = totalBytes
 		  pbProgress.Value = bytesReceived
 		  
 		  tmrTimeout.Reset
@@ -1292,7 +1350,9 @@ End
 #tag EndEvents
 #tag Events hvNotes
 	#tag Event
-		Function NewWindow() As HTMLViewer
+		Function NewWindow(url as String) As DesktopHTMLViewer
+		  #Pragma Unused url
+		  
 		  return hvNewWindow
 		  
 		End Function
@@ -1308,8 +1368,8 @@ End
 		End Function
 	#tag EndEvent
 	#tag Event
-		Sub Error(errorNumber as Integer, errorMessage as String)
-		  #pragma unused errorMessage
+		Sub Error(error As RuntimeException)
+		  #pragma unused Error
 		  
 		  #if TargetMacOS then
 		    const kCancelledCode as integer = -999
@@ -1317,7 +1377,7 @@ End
 		    const kCancelledCode as integer = -9999999999
 		  #endif
 		  
-		  if errorNumber <> kCancelledCode then
+		  if error.ErrorNumber <> kCancelledCode then
 		    break
 		  end if
 		  
@@ -1326,6 +1386,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="HasTitleBar"
+		Visible=true
+		Group="Frame"
+		InitialValue="True"
+		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="MinimumWidth"
 		Visible=true
@@ -1375,8 +1443,7 @@ End
 			"6 - Rounded Window"
 			"7 - Global Floating Window"
 			"8 - Sheet Window"
-			"9 - Metal Window"
-			"11 - Modeless Dialog"
+			"9 - Modeless Dialog"
 		#tag EndEnumValues
 	#tag EndViewProperty
 	#tag ViewProperty
@@ -1439,8 +1506,8 @@ End
 		Visible=true
 		Group="Background"
 		InitialValue="&hFFFFFF"
-		Type="Color"
-		EditorType="Color"
+		Type="ColorGroup"
+		EditorType="ColorGroup"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="AppName"
@@ -1511,7 +1578,7 @@ End
 		Visible=true
 		Group="Appearance"
 		InitialValue=""
-		Type="MenuBar"
+		Type="DesktopMenuBar"
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty

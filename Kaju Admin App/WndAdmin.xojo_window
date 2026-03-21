@@ -1,51 +1,54 @@
-#tag Window
-Begin Window WndAdmin
-   BackColor       =   &cFFFFFF00
+#tag DesktopWindow
+Begin DesktopWindow WndAdmin
    Backdrop        =   0
-   CloseButton     =   True
+   BackgroundColor =   &cFFFFFF00
    Composite       =   True
-   Frame           =   0
+   DefaultLocation =   0
    FullScreen      =   False
-   FullScreenButton=   False
-   HasBackColor    =   False
+   HasBackgroundColor=   False
+   HasCloseButton  =   True
+   HasFullScreenButton=   False
+   HasMaximizeButton=   True
+   HasMinimizeButton=   True
+   HasTitleBar     =   True
    Height          =   680
    ImplicitInstance=   True
-   LiveResize      =   "True"
    MacProcID       =   0
-   MaxHeight       =   32000
-   MaximizeButton  =   True
-   MaxWidth        =   32000
+   MaximumHeight   =   32000
+   MaximumWidth    =   32000
    MenuBar         =   1253638004
    MenuBarVisible  =   True
-   MinHeight       =   680
-   MinimizeButton  =   True
-   MinWidth        =   932
-   Placement       =   0
+   MinimumHeight   =   680
+   MinimumWidth    =   932
    Resizeable      =   True
    Title           =   "Untitled"
+   Type            =   0
    Visible         =   True
    Width           =   932
-   Begin Listbox lbVersions
-      AutoDeactivate  =   True
-      AutoHideScrollbars=   True
+   Begin DesktopListBox lbVersions
+      AllowAutoDeactivate=   True
+      AllowAutoHideScrollbars=   True
+      AllowExpandableRows=   False
+      AllowFocusRing  =   True
+      AllowResizableColumns=   False
+      AllowRowDragging=   False
+      AllowRowReordering=   False
       Bold            =   False
-      Border          =   True
       ColumnCount     =   1
-      ColumnsResizable=   False
       ColumnWidths    =   ""
-      DataField       =   ""
-      DataSource      =   ""
       DefaultRowHeight=   -1
+      DropIndicatorVisible=   False
       Enabled         =   True
-      EnableDrag      =   False
-      EnableDragReorder=   False
-      GridLinesHorizontal=   0
-      GridLinesVertical=   0
-      HasHeading      =   False
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
+      GridLineStyle   =   0
+      HasBorder       =   True
+      HasHeader       =   True
+      HasHorizontalScrollbar=   False
+      HasVerticalScrollbar=   True
       HeadingIndex    =   -1
       Height          =   614
-      HelpTag         =   ""
-      Hierarchical    =   False
       Index           =   -2147483648
       InitialParent   =   ""
       InitialValue    =   ""
@@ -57,36 +60,31 @@ Begin Window WndAdmin
       LockRight       =   False
       LockTop         =   True
       RequiresSelection=   False
+      RowSelectionType=   0
       Scope           =   2
-      ScrollbarHorizontal=   False
-      ScrollBarVertical=   True
-      SelectionType   =   0
-      ShowDropIndicator=   False
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   True
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   14
       Transparent     =   False
       Underline       =   False
-      UseFocusRing    =   True
       Visible         =   True
       Width           =   203
       _ScrollOffset   =   0
       _ScrollWidth    =   -1
    End
-   Begin PushButton btnNew
-      AutoDeactivate  =   True
+   Begin DesktopButton btnNew
+      AllowAutoDeactivate=   True
       Bold            =   True
-      ButtonStyle     =   6
       Cancel          =   False
       Caption         =   "+"
       Default         =   False
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -96,29 +94,29 @@ Begin Window WndAdmin
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   False
+      MacButtonStyle  =   0
       Scope           =   2
       TabIndex        =   12
       TabPanelIndex   =   0
       TabStop         =   True
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   640
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   20
    End
-   Begin PushButton btnDelete
-      AutoDeactivate  =   True
+   Begin DesktopButton btnDelete
+      AllowAutoDeactivate=   True
       Bold            =   True
-      ButtonStyle     =   6
       Cancel          =   False
       Caption         =   "-"
       Default         =   False
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -128,13 +126,12 @@ Begin Window WndAdmin
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   False
+      MacButtonStyle  =   0
       Scope           =   2
       TabIndex        =   13
       TabPanelIndex   =   0
       TabStop         =   True
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   640
       Transparent     =   False
       Underline       =   False
@@ -142,30 +139,29 @@ Begin Window WndAdmin
       Width           =   20
    End
    Begin TextFieldChanger fldVersion
-      AcceptTabs      =   False
-      Alignment       =   0
-      AutoDeactivate  =   True
-      AutomaticallyCheckSpelling=   False
-      BackColor       =   &cFFFFFF00
+      AllowAutoDeactivate=   True
+      AllowFocusRing  =   True
+      AllowSpellChecking=   False
+      AllowTabs       =   False
+      BackgroundColor =   &cFFFFFF
       Bold            =   False
-      Border          =   True
-      CueText         =   ""
-      DataField       =   "#KajuFile.kVersionName"
-      DataSource      =   ""
       Enabled         =   False
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Format          =   ""
+      HasBorder       =   True
       Height          =   22
-      HelpTag         =   ""
+      Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
       Left            =   380
-      LimitText       =   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      Mask            =   ""
+      MaximumCharactersAllowed=   0
       Password        =   False
       ReadOnly        =   False
       Scope           =   2
@@ -173,25 +169,24 @@ Begin Window WndAdmin
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   ""
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   52
       Transparent     =   False
       Underline       =   False
-      UseFocusRing    =   True
+      ValidationMask  =   ""
       Visible         =   True
       Width           =   80
    End
-   Begin Label Label1
-      AutoDeactivate  =   True
+   Begin DesktopLabel Label1
+      AllowAutoDeactivate=   True
       Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   0
       InitialParent   =   ""
       Italic          =   False
@@ -208,23 +203,23 @@ Begin Window WndAdmin
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "Version:"
-      TextAlign       =   0
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   53
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   117
    End
-   Begin TabPanel TabPanel1
-      AutoDeactivate  =   True
+   Begin DesktopTabPanel TabPanel1
+      AllowAutoDeactivate=   True
       Bold            =   False
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   509
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -241,9 +236,7 @@ Begin Window WndAdmin
       TabIndex        =   10
       TabPanelIndex   =   0
       TabStop         =   True
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   119
       Transparent     =   False
       Underline       =   False
@@ -251,25 +244,27 @@ Begin Window WndAdmin
       Visible         =   True
       Width           =   653
       Begin TextAreaChanger fldReleaseNotes
-         AcceptTabs      =   False
-         Alignment       =   0
-         AutoDeactivate  =   True
-         AutomaticallyCheckSpelling=   True
-         BackColor       =   &cFFFFFF00
+         AllowAutoDeactivate=   True
+         AllowFocusRing  =   True
+         AllowSpellChecking=   True
+         AllowStyledText =   True
+         AllowTabs       =   False
+         BackgroundColor =   &cFFFFFF
          Bold            =   False
-         Border          =   True
-         DataField       =   "ReleaseNotes"
-         DataSource      =   ""
          Enabled         =   False
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
          Format          =   ""
+         HasBorder       =   True
+         HasHorizontalScrollbar=   False
+         HasVerticalScrollbar=   True
          Height          =   177
-         HelpTag         =   ""
          HideSelection   =   True
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
          Italic          =   False
          Left            =   271
-         LimitText       =   0
          LineHeight      =   0.0
          LineSpacing     =   1.0
          LockBottom      =   True
@@ -277,34 +272,29 @@ Begin Window WndAdmin
          LockLeft        =   True
          LockRight       =   True
          LockTop         =   True
-         Mask            =   ""
+         MaximumCharactersAllowed=   0
          Multiline       =   True
          ReadOnly        =   False
          Scope           =   2
-         ScrollbarHorizontal=   False
-         ScrollbarVertical=   True
-         Styled          =   False
          TabIndex        =   9
          TabPanelIndex   =   1
          TabStop         =   True
          Text            =   ""
+         TextAlignment   =   0
          TextColor       =   &c00000000
-         TextFont        =   "System"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   194
          Transparent     =   False
          Underline       =   False
          UnicodeMode     =   0
-         UseFocusRing    =   True
+         ValidationMask  =   ""
          Visible         =   True
          Width           =   613
       End
-      Begin HTMLViewer hvReleaseNotesPreview
+      Begin DesktopHTMLViewer hvReleaseNotesPreview
          AutoDeactivate  =   True
          Enabled         =   True
          Height          =   210
-         HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
          Left            =   271
@@ -318,18 +308,19 @@ Begin Window WndAdmin
          TabIndex        =   12
          TabPanelIndex   =   1
          TabStop         =   True
+         Tooltip         =   ""
          Top             =   408
          Visible         =   True
          Width           =   613
       End
-      Begin Label Label1
-         AutoDeactivate  =   True
+      Begin DesktopLabel Label1
+         AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
          Height          =   20
-         HelpTag         =   ""
          Index           =   4
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -346,25 +337,23 @@ Begin Window WndAdmin
          TabPanelIndex   =   1
          TabStop         =   True
          Text            =   "Preview:"
-         TextAlign       =   0
+         TextAlignment   =   0
          TextColor       =   &c00000000
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   383
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   100
       End
-      Begin Label Label1
-         AutoDeactivate  =   True
+      Begin DesktopLabel Label1
+         AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
          Height          =   20
-         HelpTag         =   ""
          Index           =   7
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -381,11 +370,9 @@ Begin Window WndAdmin
          TabPanelIndex   =   1
          TabStop         =   True
          Text            =   "Release Notes (HTML):"
-         TextAlign       =   0
+         TextAlignment   =   0
          TextColor       =   &c00000000
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   171
          Transparent     =   False
          Underline       =   False
@@ -393,31 +380,30 @@ Begin Window WndAdmin
          Width           =   142
       End
       Begin TextFieldChanger fldImageURL
-         AcceptTabs      =   False
-         Alignment       =   0
-         AutoDeactivate  =   True
-         AutomaticallyCheckSpelling=   False
-         BackColor       =   &cFFFFFF00
+         AllowAutoDeactivate=   True
+         AllowFocusRing  =   True
+         AllowSpellChecking=   False
+         AllowTabs       =   False
+         BackgroundColor =   &cFFFFFF
          Bold            =   False
-         Border          =   True
-         CueText         =   ""
-         DataField       =   "ImageURL"
-         DataSource      =   ""
          Enabled         =   False
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
          Format          =   ""
+         HasBorder       =   True
          Height          =   22
-         HelpTag         =   ""
+         Hint            =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
          Italic          =   False
          Left            =   350
-         LimitText       =   0
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
          LockRight       =   True
          LockTop         =   True
-         Mask            =   ""
+         MaximumCharactersAllowed=   0
          Password        =   False
          ReadOnly        =   False
          Scope           =   2
@@ -425,25 +411,24 @@ Begin Window WndAdmin
          TabPanelIndex   =   4
          TabStop         =   True
          Text            =   ""
+         TextAlignment   =   0
          TextColor       =   &c00000000
-         TextFont        =   "System"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   195
          Transparent     =   False
          Underline       =   False
-         UseFocusRing    =   True
+         ValidationMask  =   ""
          Visible         =   True
          Width           =   534
       End
-      Begin Label Label1
-         AutoDeactivate  =   True
+      Begin DesktopLabel Label1
+         AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
          Height          =   20
-         HelpTag         =   ""
          Index           =   8
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -460,11 +445,9 @@ Begin Window WndAdmin
          TabPanelIndex   =   4
          TabStop         =   True
          Text            =   "URL:"
-         TextAlign       =   0
+         TextAlignment   =   0
          TextColor       =   &c00000000
-         TextFont        =   "System"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   195
          Transparent     =   False
          Underline       =   False
@@ -472,14 +455,14 @@ Begin Window WndAdmin
          Width           =   67
       End
       Begin CheckBoxChanger cbImageUseTransparency
-         AutoDeactivate  =   True
+         AllowAutoDeactivate=   True
          Bold            =   False
          Caption         =   "Use Transparency"
-         DataField       =   "UseTransparency"
-         DataSource      =   ""
          Enabled         =   False
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
          Height          =   20
-         HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -490,25 +473,22 @@ Begin Window WndAdmin
          LockRight       =   False
          LockTop         =   True
          Scope           =   2
-         State           =   0
          TabIndex        =   0
          TabPanelIndex   =   4
          TabStop         =   True
-         TextFont        =   "System"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   162
          Transparent     =   False
          Underline       =   False
          Value           =   False
          Visible         =   True
+         VisualState     =   0
          Width           =   180
       End
-      Begin HTMLViewer hvImagePreview
+      Begin DesktopHTMLViewer hvImagePreview
          AutoDeactivate  =   True
          Enabled         =   True
          Height          =   351
-         HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
          Left            =   271
@@ -522,30 +502,34 @@ Begin Window WndAdmin
          TabIndex        =   5
          TabPanelIndex   =   4
          TabStop         =   True
+         Tooltip         =   ""
          Top             =   257
          Visible         =   True
          Width           =   613
       End
-      Begin BevelButton btnStyle
-         AcceptFocus     =   True
-         AutoDeactivate  =   True
-         BackColor       =   &c00000000
-         Bevel           =   0
+      Begin DesktopBevelButton btnStyle
+         Active          =   False
+         AllowAutoDeactivate=   True
+         AllowFocus      =   False
+         AllowTabStop    =   True
+         BackgroundColor =   
+         BevelStyle      =   0
          Bold            =   True
-         ButtonType      =   0
+         ButtonStyle     =   0
          Caption         =   "B"
-         CaptionAlign    =   3
+         CaptionAlignment=   0
          CaptionDelta    =   0
-         CaptionPlacement=   1
+         CaptionPosition =   0
          Enabled         =   True
-         HasBackColor    =   False
-         HasMenu         =   0
+         FontName        =   ""
+         FontSize        =   0.0
+         FontUnit        =   0
+         HasBackgroundColor=   False
          Height          =   22
-         HelpTag         =   "Bold"
          Icon            =   0
-         IconAlign       =   0
-         IconDX          =   0
-         IconDY          =   0
+         IconAlignment   =   0
+         IconDeltaX      =   0
+         IconDeltaY      =   0
          Index           =   0
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -555,41 +539,47 @@ Begin Window WndAdmin
          LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
+         MenuStyle       =   0
+         PanelIndex      =   0
          Scope           =   2
          TabIndex        =   6
          TabPanelIndex   =   1
-         TabStop         =   True
          TextColor       =   &c00000000
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   169
          Transparent     =   False
          Underline       =   False
          Value           =   False
          Visible         =   True
          Width           =   26
+         _mIndex         =   0
+         _mInitialParent =   ""
+         _mName          =   ""
+         _mPanelIndex    =   0
       End
-      Begin BevelButton btnStyle
-         AcceptFocus     =   True
-         AutoDeactivate  =   True
-         BackColor       =   &c00000000
-         Bevel           =   0
+      Begin DesktopBevelButton btnStyle
+         Active          =   False
+         AllowAutoDeactivate=   True
+         AllowFocus      =   False
+         AllowTabStop    =   True
+         BackgroundColor =   
+         BevelStyle      =   0
          Bold            =   False
-         ButtonType      =   0
+         ButtonStyle     =   0
          Caption         =   "I"
-         CaptionAlign    =   3
+         CaptionAlignment=   0
          CaptionDelta    =   0
-         CaptionPlacement=   1
+         CaptionPosition =   0
          Enabled         =   True
-         HasBackColor    =   False
-         HasMenu         =   0
+         FontName        =   ""
+         FontSize        =   0.0
+         FontUnit        =   0
+         HasBackgroundColor=   False
          Height          =   22
-         HelpTag         =   "Italic"
          Icon            =   0
-         IconAlign       =   0
-         IconDX          =   0
-         IconDY          =   0
+         IconAlignment   =   0
+         IconDeltaX      =   0
+         IconDeltaY      =   0
          Index           =   1
          InitialParent   =   "TabPanel1"
          Italic          =   True
@@ -599,41 +589,47 @@ Begin Window WndAdmin
          LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
+         MenuStyle       =   0
+         PanelIndex      =   0
          Scope           =   2
          TabIndex        =   7
          TabPanelIndex   =   1
-         TabStop         =   True
          TextColor       =   &c00000000
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   169
          Transparent     =   False
          Underline       =   False
          Value           =   False
          Visible         =   True
          Width           =   26
+         _mIndex         =   0
+         _mInitialParent =   ""
+         _mName          =   ""
+         _mPanelIndex    =   0
       End
-      Begin BevelButton btnStyle
-         AcceptFocus     =   True
-         AutoDeactivate  =   True
-         BackColor       =   &c00000000
-         Bevel           =   0
+      Begin DesktopBevelButton btnStyle
+         Active          =   False
+         AllowAutoDeactivate=   True
+         AllowFocus      =   False
+         AllowTabStop    =   True
+         BackgroundColor =   
+         BevelStyle      =   0
          Bold            =   False
-         ButtonType      =   0
+         ButtonStyle     =   0
          Caption         =   "U"
-         CaptionAlign    =   3
+         CaptionAlignment=   0
          CaptionDelta    =   0
-         CaptionPlacement=   1
+         CaptionPosition =   0
          Enabled         =   True
-         HasBackColor    =   False
-         HasMenu         =   0
+         FontName        =   ""
+         FontSize        =   0.0
+         FontUnit        =   0
+         HasBackgroundColor=   False
          Height          =   22
-         HelpTag         =   "Underline"
          Icon            =   0
-         IconAlign       =   0
-         IconDX          =   0
-         IconDY          =   0
+         IconAlignment   =   0
+         IconDeltaX      =   0
+         IconDeltaY      =   0
          Index           =   2
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -643,41 +639,47 @@ Begin Window WndAdmin
          LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
+         MenuStyle       =   0
+         PanelIndex      =   0
          Scope           =   2
          TabIndex        =   8
          TabPanelIndex   =   1
-         TabStop         =   True
          TextColor       =   &c00000000
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   169
          Transparent     =   False
          Underline       =   True
          Value           =   False
          Visible         =   True
          Width           =   26
+         _mIndex         =   0
+         _mInitialParent =   ""
+         _mName          =   ""
+         _mPanelIndex    =   0
       End
-      Begin BevelButton btnBreak
-         AcceptFocus     =   True
-         AutoDeactivate  =   True
-         BackColor       =   &c00000000
-         Bevel           =   0
+      Begin DesktopBevelButton btnBreak
+         Active          =   False
+         AllowAutoDeactivate=   True
+         AllowFocus      =   False
+         AllowTabStop    =   True
+         BackgroundColor =   
+         BevelStyle      =   0
          Bold            =   False
-         ButtonType      =   0
+         ButtonStyle     =   0
          Caption         =   "<br />"
-         CaptionAlign    =   3
+         CaptionAlignment=   0
          CaptionDelta    =   0
-         CaptionPlacement=   1
+         CaptionPosition =   0
          Enabled         =   True
-         HasBackColor    =   False
-         HasMenu         =   0
+         FontName        =   ""
+         FontSize        =   0.0
+         FontUnit        =   0
+         HasBackgroundColor=   False
          Height          =   22
-         HelpTag         =   "Insert break"
          Icon            =   0
-         IconAlign       =   0
-         IconDX          =   0
-         IconDY          =   0
+         IconAlignment   =   0
+         IconDeltaX      =   0
+         IconDeltaY      =   0
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -687,41 +689,47 @@ Begin Window WndAdmin
          LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
+         MenuStyle       =   0
+         PanelIndex      =   0
          Scope           =   2
          TabIndex        =   1
          TabPanelIndex   =   1
-         TabStop         =   True
          TextColor       =   &c00000000
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   169
          Transparent     =   False
          Underline       =   False
          Value           =   False
          Visible         =   True
          Width           =   50
+         _mIndex         =   0
+         _mInitialParent =   ""
+         _mName          =   ""
+         _mPanelIndex    =   0
       End
-      Begin BevelButton btnStyle
-         AcceptFocus     =   True
-         AutoDeactivate  =   True
-         BackColor       =   &c00000000
-         Bevel           =   0
+      Begin DesktopBevelButton btnStyle
+         Active          =   False
+         AllowAutoDeactivate=   True
+         AllowFocus      =   False
+         AllowTabStop    =   True
+         BackgroundColor =   
+         BevelStyle      =   0
          Bold            =   False
-         ButtonType      =   0
+         ButtonStyle     =   0
          Caption         =   "p"
-         CaptionAlign    =   3
+         CaptionAlignment=   0
          CaptionDelta    =   0
-         CaptionPlacement=   1
+         CaptionPosition =   0
          Enabled         =   True
-         HasBackColor    =   False
-         HasMenu         =   0
+         FontName        =   ""
+         FontSize        =   0.0
+         FontUnit        =   0
+         HasBackgroundColor=   False
          Height          =   22
-         HelpTag         =   "Create a paragraph tag"
          Icon            =   0
-         IconAlign       =   0
-         IconDX          =   0
-         IconDY          =   0
+         IconAlignment   =   0
+         IconDeltaX      =   0
+         IconDeltaY      =   0
          Index           =   3
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -731,41 +739,47 @@ Begin Window WndAdmin
          LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
+         MenuStyle       =   0
+         PanelIndex      =   0
          Scope           =   2
          TabIndex        =   2
          TabPanelIndex   =   1
-         TabStop         =   True
          TextColor       =   &c00000000
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   169
          Transparent     =   False
          Underline       =   False
          Value           =   False
          Visible         =   True
          Width           =   26
+         _mIndex         =   0
+         _mInitialParent =   ""
+         _mName          =   ""
+         _mPanelIndex    =   0
       End
-      Begin BevelButton btnList
-         AcceptFocus     =   True
-         AutoDeactivate  =   True
-         BackColor       =   &c00000000
-         Bevel           =   0
+      Begin DesktopBevelButton btnList
+         Active          =   False
+         AllowAutoDeactivate=   True
+         AllowFocus      =   False
+         AllowTabStop    =   True
+         BackgroundColor =   
+         BevelStyle      =   0
          Bold            =   False
-         ButtonType      =   0
+         ButtonStyle     =   0
          Caption         =   "ul"
-         CaptionAlign    =   3
+         CaptionAlignment=   0
          CaptionDelta    =   0
-         CaptionPlacement=   1
+         CaptionPosition =   0
          Enabled         =   True
-         HasBackColor    =   False
-         HasMenu         =   0
+         FontName        =   ""
+         FontSize        =   0.0
+         FontUnit        =   0
+         HasBackgroundColor=   False
          Height          =   22
-         HelpTag         =   "Unordered list"
          Icon            =   0
-         IconAlign       =   0
-         IconDX          =   0
-         IconDY          =   0
+         IconAlignment   =   0
+         IconDeltaX      =   0
+         IconDeltaY      =   0
          Index           =   0
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -775,41 +789,47 @@ Begin Window WndAdmin
          LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
+         MenuStyle       =   0
+         PanelIndex      =   0
          Scope           =   2
          TabIndex        =   3
          TabPanelIndex   =   1
-         TabStop         =   True
          TextColor       =   &c00000000
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   169
          Transparent     =   False
          Underline       =   False
          Value           =   False
          Visible         =   True
          Width           =   26
+         _mIndex         =   0
+         _mInitialParent =   ""
+         _mName          =   ""
+         _mPanelIndex    =   0
       End
-      Begin BevelButton btnList
-         AcceptFocus     =   True
-         AutoDeactivate  =   True
-         BackColor       =   &c00000000
-         Bevel           =   0
+      Begin DesktopBevelButton btnList
+         Active          =   False
+         AllowAutoDeactivate=   True
+         AllowFocus      =   False
+         AllowTabStop    =   True
+         BackgroundColor =   
+         BevelStyle      =   0
          Bold            =   False
-         ButtonType      =   0
+         ButtonStyle     =   0
          Caption         =   "ol"
-         CaptionAlign    =   3
+         CaptionAlignment=   0
          CaptionDelta    =   0
-         CaptionPlacement=   1
+         CaptionPosition =   0
          Enabled         =   True
-         HasBackColor    =   False
-         HasMenu         =   0
+         FontName        =   ""
+         FontSize        =   0.0
+         FontUnit        =   0
+         HasBackgroundColor=   False
          Height          =   22
-         HelpTag         =   "Ordered list"
          Icon            =   0
-         IconAlign       =   0
-         IconDX          =   0
-         IconDY          =   0
+         IconAlignment   =   0
+         IconDeltaX      =   0
+         IconDeltaY      =   0
          Index           =   1
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -819,41 +839,47 @@ Begin Window WndAdmin
          LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
+         MenuStyle       =   0
+         PanelIndex      =   0
          Scope           =   2
          TabIndex        =   4
          TabPanelIndex   =   1
-         TabStop         =   True
          TextColor       =   &c00000000
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   169
          Transparent     =   False
          Underline       =   False
          Value           =   False
          Visible         =   True
          Width           =   26
+         _mIndex         =   0
+         _mInitialParent =   ""
+         _mName          =   ""
+         _mPanelIndex    =   0
       End
-      Begin BevelButton btnStyle
-         AcceptFocus     =   True
-         AutoDeactivate  =   True
-         BackColor       =   &c00000000
-         Bevel           =   0
+      Begin DesktopBevelButton btnStyle
+         Active          =   False
+         AllowAutoDeactivate=   True
+         AllowFocus      =   False
+         AllowTabStop    =   True
+         BackgroundColor =   
+         BevelStyle      =   0
          Bold            =   False
-         ButtonType      =   0
+         ButtonStyle     =   0
          Caption         =   "li"
-         CaptionAlign    =   3
+         CaptionAlignment=   0
          CaptionDelta    =   0
-         CaptionPlacement=   1
+         CaptionPosition =   0
          Enabled         =   True
-         HasBackColor    =   False
-         HasMenu         =   0
+         FontName        =   ""
+         FontSize        =   0.0
+         FontUnit        =   0
+         HasBackgroundColor=   False
          Height          =   22
-         HelpTag         =   "List item"
          Icon            =   0
-         IconAlign       =   0
-         IconDX          =   0
-         IconDY          =   0
+         IconAlignment   =   0
+         IconDeltaX      =   0
+         IconDeltaY      =   0
          Index           =   6
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -863,29 +889,32 @@ Begin Window WndAdmin
          LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
+         MenuStyle       =   0
+         PanelIndex      =   0
          Scope           =   2
          TabIndex        =   5
          TabPanelIndex   =   1
-         TabStop         =   True
          TextColor       =   &c00000000
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   169
          Transparent     =   False
          Underline       =   False
          Value           =   False
          Visible         =   True
          Width           =   26
+         _mIndex         =   0
+         _mInitialParent =   ""
+         _mName          =   ""
+         _mPanelIndex    =   0
       End
-      Begin Label Label2
-         AutoDeactivate  =   True
+      Begin DesktopLabel Label2
+         AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
          Height          =   20
-         HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -902,25 +931,23 @@ Begin Window WndAdmin
          TabPanelIndex   =   2
          TabStop         =   True
          Text            =   "Use ‘$VERSION$’ in the URL to insert the version on export"
-         TextAlign       =   1
+         TextAlignment   =   0
          TextColor       =   &c00000000
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   589
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   613
       End
-      Begin Label Label3
-         AutoDeactivate  =   True
+      Begin DesktopLabel Label3
+         AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
          Height          =   20
-         HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -937,26 +964,24 @@ Begin Window WndAdmin
          TabPanelIndex   =   3
          TabStop         =   True
          Text            =   "Use ‘$VERSION$’ in the URL to insert the version on export"
-         TextAlign       =   1
+         TextAlignment   =   0
          TextColor       =   &c00000000
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   589
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   613
       End
-      Begin CheckBox cbPre2Preview
-         AutoDeactivate  =   True
+      Begin DesktopCheckBox cbPre2Preview
+         AllowAutoDeactivate=   True
          Bold            =   False
          Caption         =   "Show Pre-2.0 Preview"
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
          Height          =   20
-         HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -967,60 +992,56 @@ Begin Window WndAdmin
          LockRight       =   True
          LockTop         =   False
          Scope           =   2
-         State           =   0
          TabIndex        =   11
          TabPanelIndex   =   1
          TabStop         =   True
-         TextFont        =   "SmallSystem"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   382
          Transparent     =   False
          Underline       =   False
          Value           =   False
          Visible         =   True
+         VisualState     =   0
          Width           =   157
       End
       Begin PopupMenuChanger pumImageScale
-         AutoDeactivate  =   True
+         AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   "ImageScale"
-         DataSource      =   ""
          Enabled         =   False
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
          Height          =   20
-         HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
          InitialValue    =   "1\n2\n3"
          Italic          =   False
          Left            =   804
-         ListIndex       =   0
          LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   False
          LockRight       =   True
          LockTop         =   True
          Scope           =   2
+         SelectedRowIndex=   0
          TabIndex        =   2
          TabPanelIndex   =   4
          TabStop         =   True
-         TextFont        =   "System"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   161
          Transparent     =   False
          Underline       =   False
          Visible         =   True
          Width           =   80
       End
-      Begin Label Label1
-         AutoDeactivate  =   True
+      Begin DesktopLabel Label1
+         AllowAutoDeactivate=   True
          Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
          Enabled         =   True
+         FontName        =   "System"
+         FontSize        =   0.0
+         FontUnit        =   0
          Height          =   20
-         HelpTag         =   ""
          Index           =   10
          InitialParent   =   "TabPanel1"
          Italic          =   False
@@ -1037,11 +1058,9 @@ Begin Window WndAdmin
          TabPanelIndex   =   4
          TabStop         =   True
          Text            =   "Scale:"
-         TextAlign       =   0
+         TextAlignment   =   0
          TextColor       =   &c00000000
-         TextFont        =   "System"
-         TextSize        =   0.0
-         TextUnit        =   0
+         Tooltip         =   ""
          Top             =   162
          Transparent     =   False
          Underline       =   False
@@ -1050,30 +1069,29 @@ Begin Window WndAdmin
       End
    End
    Begin TextFieldChanger fldAppName
-      AcceptTabs      =   False
-      Alignment       =   0
-      AutoDeactivate  =   True
-      AutomaticallyCheckSpelling=   False
-      BackColor       =   &cFFFFFF00
+      AllowAutoDeactivate=   True
+      AllowFocusRing  =   True
+      AllowSpellChecking=   False
+      AllowTabs       =   False
+      BackgroundColor =   &cFFFFFF
       Bold            =   False
-      Border          =   True
-      CueText         =   ""
-      DataField       =   "AppName"
-      DataSource      =   ""
       Enabled         =   False
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Format          =   ""
+      HasBorder       =   True
       Height          =   22
-      HelpTag         =   ""
+      Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
       Left            =   380
-      LimitText       =   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      Mask            =   ""
+      MaximumCharactersAllowed=   0
       Password        =   False
       ReadOnly        =   False
       Scope           =   2
@@ -1081,25 +1099,24 @@ Begin Window WndAdmin
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   ""
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   18
       Transparent     =   False
       Underline       =   False
-      UseFocusRing    =   True
+      ValidationMask  =   ""
       Visible         =   True
       Width           =   229
    End
-   Begin Label Label1
-      AutoDeactivate  =   True
+   Begin DesktopLabel Label1
+      AllowAutoDeactivate=   True
       Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   3
       InitialParent   =   ""
       Italic          =   False
@@ -1116,11 +1133,9 @@ Begin Window WndAdmin
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "App Name:"
-      TextAlign       =   0
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   19
       Transparent     =   False
       Underline       =   False
@@ -1128,14 +1143,14 @@ Begin Window WndAdmin
       Width           =   117
    End
    Begin CheckBoxChanger cbRequiresPayment
-      AutoDeactivate  =   True
+      AllowAutoDeactivate=   True
       Bold            =   False
       Caption         =   "Requires Payment"
-      DataField       =   "RequiresPayment"
-      DataSource      =   ""
       Enabled         =   False
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -1146,26 +1161,24 @@ Begin Window WndAdmin
       LockRight       =   False
       LockTop         =   True
       Scope           =   2
-      State           =   0
       TabIndex        =   3
       TabPanelIndex   =   0
       TabStop         =   True
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   19
       Transparent     =   False
       Underline       =   False
       Value           =   False
       Visible         =   True
+      VisualState     =   0
       Width           =   180
    End
-   Begin HTMLViewer hvNewWindow
+   Begin DesktopHTMLViewer hvNewWindow
       AutoDeactivate  =   True
       Enabled         =   False
       Height          =   200
-      HelpTag         =   ""
       Index           =   -2147483648
+      InitialParent   =   ""
       Left            =   -371
       LockBottom      =   False
       LockedInPosition=   False
@@ -1177,6 +1190,7 @@ Begin Window WndAdmin
       TabIndex        =   11
       TabPanelIndex   =   0
       TabStop         =   True
+      Tooltip         =   ""
       Top             =   156
       Visible         =   False
       Width           =   300
@@ -1191,16 +1205,17 @@ Begin Window WndAdmin
       Scope           =   2
       TabPanelIndex   =   0
    End
-   Begin PushButton btnCopyPublicKey
-      AutoDeactivate  =   True
+   Begin DesktopButton btnCopyPublicKey
+      AllowAutoDeactivate=   True
       Bold            =   False
-      ButtonStyle     =   0
       Cancel          =   False
       Caption         =   "Copy RSA Public Key"
       Default         =   False
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -1210,13 +1225,12 @@ Begin Window WndAdmin
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   False
+      MacButtonStyle  =   0
       Scope           =   2
       TabIndex        =   15
       TabPanelIndex   =   0
       TabStop         =   True
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   640
       Transparent     =   False
       Underline       =   False
@@ -1233,14 +1247,14 @@ Begin Window WndAdmin
       Scope           =   2
       TabPanelIndex   =   0
    End
-   Begin Label lblPlatform
-      AutoDeactivate  =   True
+   Begin DesktopLabel lblPlatform
+      AllowAutoDeactivate=   True
       Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   58
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -1257,25 +1271,23 @@ Begin Window WndAdmin
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "None"
-      TextAlign       =   0
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   55
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   327
    End
-   Begin Label Label1
-      AutoDeactivate  =   True
+   Begin DesktopLabel Label1
+      AllowAutoDeactivate=   True
       Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   9
       InitialParent   =   ""
       Italic          =   False
@@ -1292,27 +1304,26 @@ Begin Window WndAdmin
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "Platforms:"
-      TextAlign       =   0
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   53
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   80
    End
-   Begin PushButton btnExport
-      AutoDeactivate  =   True
+   Begin DesktopButton btnExport
+      AllowAutoDeactivate=   True
       Bold            =   False
-      ButtonStyle     =   0
       Cancel          =   False
       Caption         =   "Export..."
       Default         =   False
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -1322,29 +1333,29 @@ Begin Window WndAdmin
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   False
+      MacButtonStyle  =   0
       Scope           =   2
       TabIndex        =   17
       TabPanelIndex   =   0
       TabStop         =   True
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   639
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   85
    End
-   Begin PushButton btnDuplicate
-      AutoDeactivate  =   True
+   Begin DesktopButton btnDuplicate
+      AllowAutoDeactivate=   True
       Bold            =   False
-      ButtonStyle     =   0
       Cancel          =   False
       Caption         =   "Dupe"
       Default         =   False
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -1354,41 +1365,29 @@ Begin Window WndAdmin
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   False
+      MacButtonStyle  =   0
       Scope           =   2
       TabIndex        =   14
       TabPanelIndex   =   0
       TabStop         =   True
-      TextFont        =   "SmallSystem"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   641
       Transparent     =   False
       Underline       =   False
       Visible         =   True
       Width           =   65
    End
-   Begin BevelButton btnPreview
-      AcceptFocus     =   True
-      AutoDeactivate  =   True
-      BackColor       =   &c00000000
-      Bevel           =   0
+   Begin DesktopPopupMenu btnPreview
+      AllowAutoDeactivate=   True
       Bold            =   False
-      ButtonType      =   0
-      Caption         =   "Preview..."
-      CaptionAlign    =   3
-      CaptionDelta    =   0
-      CaptionPlacement=   1
       Enabled         =   True
-      HasBackColor    =   False
-      HasMenu         =   1
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   22
-      HelpTag         =   ""
-      Icon            =   0
-      IconAlign       =   0
-      IconDX          =   0
-      IconDY          =   0
       Index           =   -2147483648
       InitialParent   =   ""
+      InitialValue    =   ""
       Italic          =   False
       Left            =   684
       LockBottom      =   True
@@ -1397,46 +1396,42 @@ Begin Window WndAdmin
       LockRight       =   True
       LockTop         =   False
       Scope           =   2
+      SelectedRowIndex=   -1
       TabIndex        =   16
       TabPanelIndex   =   0
       TabStop         =   True
-      TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   639
       Transparent     =   False
       Underline       =   False
-      Value           =   False
       Visible         =   True
       Width           =   113
    End
    Begin TextFieldChanger fldMinRequiredVersion
-      AcceptTabs      =   False
-      Alignment       =   0
-      AutoDeactivate  =   True
-      AutomaticallyCheckSpelling=   False
-      BackColor       =   &cFFFFFF00
+      AllowAutoDeactivate=   True
+      AllowFocusRing  =   True
+      AllowSpellChecking=   False
+      AllowTabs       =   False
+      BackgroundColor =   &cFFFFFF
       Bold            =   False
-      Border          =   True
-      CueText         =   ""
-      DataField       =   "MinimumRequiredVersion"
-      DataSource      =   ""
       Enabled         =   False
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Format          =   ""
+      HasBorder       =   True
       Height          =   22
-      HelpTag         =   ""
+      Hint            =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
       Left            =   380
-      LimitText       =   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      Mask            =   ""
+      MaximumCharactersAllowed=   0
       Password        =   False
       ReadOnly        =   False
       Scope           =   2
@@ -1444,25 +1439,24 @@ Begin Window WndAdmin
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   ""
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   85
       Transparent     =   False
       Underline       =   False
-      UseFocusRing    =   True
+      ValidationMask  =   ""
       Visible         =   True
       Width           =   80
    End
-   Begin Label Label1
-      AutoDeactivate  =   True
+   Begin DesktopLabel Label1
+      AllowAutoDeactivate=   True
       Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   2
       InitialParent   =   ""
       Italic          =   False
@@ -1479,11 +1473,9 @@ Begin Window WndAdmin
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "Min. Req. Version:"
-      TextAlign       =   0
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   86
       Transparent     =   False
       Underline       =   False
@@ -1520,20 +1512,20 @@ Begin Window WndAdmin
       TabPanelIndex   =   0
    End
 End
-#tag EndWindow
+#tag EndDesktopWindow
 
 #tag WindowCode
 	#tag Event
-		Sub Activate()
+		Sub Activated()
 		  UpdateWindowTitle
 		End Sub
 	#tag EndEvent
 
 	#tag Event
-		Function CancelClose(appQuitting as Boolean) As Boolean
+		Function CancelClosing(appQuitting As Boolean) As Boolean
 		  dim r as Boolean = false
 		  
-		  if self.ContentsChanged then
+		  if self.Changed then
 		    dim dlg as new MessageDialog
 		    dlg.Message = "This document has been modified. Save before closing?"
 		    dlg.ActionButton.Caption = "&Save"
@@ -1542,7 +1534,7 @@ End
 		    dlg.AlternateActionButton.Caption = "&Don't Save"
 		    dlg.AlternateActionButton.Visible = true
 		    
-		    dim btn as MessageDialogButton = dlg.ShowModalWithin( self )
+		    dim btn as MessageDialogButton = dlg.ShowModal( self )
 		    if btn is dlg.CancelButton then
 		      r = true
 		    elseif btn = dlg.AlternateActionButton then
@@ -1559,7 +1551,7 @@ End
 	#tag EndEvent
 
 	#tag Event
-		Sub Close()
+		Sub Closing()
 		  //
 		  // Tear down the BinaryInformationControls
 		  //
@@ -1574,7 +1566,7 @@ End
 	#tag EndEvent
 
 	#tag Event
-		Sub Open()
+		Sub Opening()
 		  //
 		  // Create binary controls
 		  //
@@ -1619,25 +1611,25 @@ End
 
 	#tag MenuHandler
 		Function FileClose() As Boolean Handles FileClose.Action
-			self.Close
-			Return True
-			
+		  self.Close
+		  Return True
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileSave() As Boolean Handles FileSave.Action
-			call DoSave()
-			Return True
-			
+		  call DoSave()
+		  Return True
+		  
 		End Function
 	#tag EndMenuHandler
 
 	#tag MenuHandler
 		Function FileSaveAs() As Boolean Handles FileSaveAs.Action
-			call DoSaveAs()
-			Return True
-			
+		  call DoSaveAs()
+		  Return True
+		  
 		End Function
 	#tag EndMenuHandler
 
@@ -1649,12 +1641,19 @@ End
 		    return
 		  end if
 		  
-		  dim trueValue as boolean = lbVersions.ListIndex <> -1
+		  dim trueValue as boolean = lbVersions.SelectedRowIndex <> -1
 		  
 		  dim lastIndex as integer = ControlCount - 1
 		  for i as integer = 0 to lastIndex
 		    
-		    dim c as Control = self.Control( i )
+		    Dim o As Object = Self.ControlAt( i )
+		    
+		    If Not ( o IsA DesktopControl ) Then
+		      Continue
+		    End If
+		    
+		    Var c As DesktopControl = DesktopControl( o )
+		    
 		    dim doIt as boolean
 		    if ControlDataField( c ) <> "" then
 		      doIt = true
@@ -1665,7 +1664,7 @@ End
 		    end if
 		    
 		    if doIt then
-		      RectControl( c ).Enabled = trueValue
+		      DesktopUIControl( c ).Enabled = trueValue
 		    end if
 		  next i
 		  
@@ -1728,12 +1727,12 @@ End
 		  dim openTag as string = "<" + tag + ">" + eol
 		  dim closeTag as string = eol + "</" + tag + ">"
 		  
-		  dim s as string = fldReleaseNotes.SelText
-		  dim selStart as integer = fldReleaseNotes.SelStart
+		  dim s as string = fldReleaseNotes.SelectedText
+		  dim selStart as integer = fldReleaseNotes.SelectionStart
 		  
-		  fldReleaseNotes.SelText = openTag + s + closeTag
+		  fldReleaseNotes.SelectedText = openTag + s + closeTag
 		  if s = "" then // No selection so position the cursor
-		    fldReleaseNotes.SelStart = selStart + openTag.Len
+		    fldReleaseNotes.SelectionStart = selStart + openTag.Len
 		  end if
 		  
 		  
@@ -1742,17 +1741,28 @@ End
 
 	#tag Method, Flags = &h21
 		Private Sub ClearFields()
-		  dim savedDirty as boolean = self.ContentsChanged
+		  dim savedDirty as boolean = self.Changed
 		  
 		  self.Loading = true
 		  
 		  dim lastIndex as integer = ControlCount - 1
-		  for i as integer = 0 to lastIndex
-		    dim c as Control = self.Control( i )
+		  For i As Integer = 0 To lastIndex
+		    
+		    Dim o As Object = Self.ControlAt( i )
+		    
+		    If Not ( o IsA DesktopControl ) Then
+		      Continue
+		    End If
+		    
+		    Var c As DesktopControl = DesktopControl( o )
+		    
 		    select case c
-		    case IsA TextEdit
-		    case IsA CheckBox
-		    case IsA PopupMenu
+		    Case IsA DesktopTextControl
+		      
+		    Case IsA DesktopCheckBox
+		      
+		    Case IsA DesktopPopupMenu
+		      
 		    else
 		      continue for i
 		    end
@@ -1770,53 +1780,55 @@ End
 		  self.Loading = false
 		  
 		  AdjustControls()
-		  self.ContentsChanged = savedDirty
+		  self.Changed = savedDirty
 		End Sub
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Function ControlDataField(c As Control) As String
-		  // Returns the DataField field for a control
+		Private Function ControlDataField(c As DesktopControl) As String
+		  // Returns the matching Kaju field name for each editable control.
 		  
-		  dim value as string
-		  
-		  select case c
-		  case IsA TextEdit
-		    dim fld as TextEdit = TextEdit( c )
-		    value = fld.DataField
-		    
-		  case IsA CheckBox
-		    dim cb as CheckBox = CheckBox( c )
-		    value = cb.DataField
-		    
-		  case IsA PopUpMenu
-		    dim pum as PopupMenu = PopupMenu( c )
-		    value = pum.DataField
-		    
-		  end select
-		  
-		  return value
+		  Select Case c
+		  Case fldVersion
+		    Return KajuFile.kVersionName
+		  Case fldReleaseNotes
+		    Return "ReleaseNotes"
+		  Case fldImageURL
+		    Return "ImageURL"
+		  Case cbImageUseTransparency
+		    Return "UseTransparency"
+		  Case pumImageScale
+		    Return "ImageScale"
+		  Case fldAppName
+		    Return "AppName"
+		  Case cbRequiresPayment
+		    Return "RequiresPayment"
+		  Case fldMinRequiredVersion
+		    Return "MinimumRequiredVersion"
+		  Else
+		    Return ""
+		  End Select
 		  
 		End Function
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Function ControlValue(c As Control) As Variant
+		Private Function ControlValue(c As DesktopControl) As Variant
 		  dim r as Variant
 		  
 		  select case c
-		  case IsA TextEdit
-		    dim fld as TextEdit = TextEdit( c )
+		  case IsA DesktopTextControl
+		    dim fld as DesktopTextControl = DesktopTextControl( c )
 		    r = fld.Text
 		    
-		  case IsA CheckBox
-		    dim cb as CheckBox = CheckBox( c )
+		  case IsA DesktopCheckBox
+		    dim cb as DesktopCheckBox = DesktopCheckBox( c )
 		    r = cb.Value
 		    
-		  case IsA PopupMenu
-		    dim pum as PopupMenu = PopupMenu( c )
-		    if pum.ListIndex <> -1 then
-		      r = pum.List( pum.ListIndex )
+		  case IsA DesktopPopupMenu
+		    dim pum as DesktopPopupMenu = DesktopPopupMenu( c )
+		    if pum.SelectedRowIndex <> -1 then
+		      r = pum.RowTextAt( pum.SelectedRowIndex )
 		    end if
 		    
 		  end select
@@ -1827,25 +1839,29 @@ End
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Sub ControlValue(c As Control, Assigns value As Variant)
+		Private Sub ControlValue(c As DesktopControl, Assigns value As Variant)
+		  
 		  select case c
-		  case IsA TextEdit
-		    dim fld as TextEdit = TextEdit( c )
+		    
+		  case IsA DesktopTextControl
+		    dim fld as DesktopTextControl = DesktopTextControl( c )
 		    dim sValue as string = value.StringValue.DefineEncoding( Encodings.UTF8 )
 		    fld.Text = sValue
 		    
-		  case IsA CheckBox
-		    dim cb as CheckBox = CheckBox( c )
+		  case IsA DesktopCheckBox
+		    dim cb as DesktopCheckBox = DesktopCheckBox( c )
 		    cb.Value = value.BooleanValue
 		    
-		  case IsA PopupMenu
-		    dim pum as PopupMenu = PopupMenu( c )
+		  case IsA DesktopPopupMenu
+		    Dim pum As DesktopPopupMenu = DesktopPopupMenu( c )
+		    
 		    if value.IsNull then
-		      pum.ListIndex = 0
+		      pum.SelectedRowIndex = 0
+		      
 		    else
-		      for i as integer = pum.ListCount - 1 downto 0
-		        if pum.List( i ) = value.StringValue then
-		          pum.ListIndex = i
+		      for i as integer = pum.RowCount - 1 downto 0
+		        if pum.RowTextAt( i ) = value.StringValue then
+		          pum.SelectedRowIndex = i
 		          exit
 		        end if
 		      next
@@ -1861,27 +1877,27 @@ End
 
 	#tag Method, Flags = &h21
 		Private Sub DeleteVersion()
-		  dim curIndex as integer = lbVersions.ListIndex
+		  dim curIndex as integer = lbVersions.SelectedRowIndex
 		  if curIndex = -1 then
 		    return
 		  end if
 		  
 		  StoreFieldsToVersionRow
 		  
-		  dim version as Kaju.UpdateInformation = lbVersions.RowTag( curIndex )
+		  dim version as Kaju.UpdateInformation = lbVersions.RowTagAt( curIndex )
 		  
 		  dim dlg as new MessageDialog
 		  dlg.Message = "Really delete version " + version.Version + "?"
 		  dlg.Explanation = "This cannot be undone."
 		  dlg.ActionButton.Caption = "&Delete"
 		  dlg.CancelButton.Visible = true
-		  dim btn as MessageDialogButton = dlg.ShowModalWithin( self )
+		  dim btn as MessageDialogButton = dlg.ShowModal( self )
 		  if btn is dlg.CancelButton then
 		    return
 		  end if
 		  
-		  lbVersions.ListIndex = -1
-		  lbVersions.RemoveRow( curIndex )
+		  lbVersions.SelectedRowIndex = -1
+		  lbVersions.RemoveRowAt( curIndex )
 		  
 		  MyKajuFile.KajuData.Remove MyKajuFile.KajuData.IndexOf( version )
 		  
@@ -1889,11 +1905,11 @@ End
 		    curIndex = curIndex - 1
 		  end if
 		  
-		  if curIndex < lbVersions.ListCount then
-		    lbVersions.ListIndex = curIndex
+		  if curIndex < lbVersions.RowCount then
+		    lbVersions.SelectedRowIndex = curIndex
 		  end if
 		  
-		  ContentsChanged = true
+		  Changed = true
 		End Sub
 	#tag EndMethod
 
@@ -1909,20 +1925,20 @@ End
 		    return DoSaveAs()
 		  end if
 		  
-		  dim savedContentsChanged as boolean = self.ContentsChanged
+		  dim savedContentsChanged as boolean = self.Changed
 		  
 		  dim r as boolean
 		  MyKajuFile.SaveTo( f )
 		  r = true
 		  Document = f
-		  ContentsChanged = false
+		  Changed = false
 		  
 		  Exception err as KajuException
-		    self.ContentsChanged= savedContentsChanged
+		    self.Changed = savedContentsChanged
 		    ShowValidationError "Save failed!", err
 		    
 		  Exception err as IOException
-		    self.ContentsChanged = savedContentsChanged
+		    self.Changed = savedContentsChanged
 		    MsgBox "Save failed!"
 		    
 		  Finally
@@ -1940,7 +1956,7 @@ End
 		  dlg.Filter = FileTypes1.KajuDocument
 		  dlg.SuggestedFileName = "New Version Line" + ext
 		  
-		  dim f as FolderItem = dlg.ShowModalWithin( self )
+		  dim f as FolderItem = dlg.ShowModal( self )
 		  
 		  dim r as boolean
 		  if f is nil then
@@ -1970,22 +1986,22 @@ End
 
 	#tag Method, Flags = &h21
 		Private Sub DuplicateVersion()
-		  dim curIndex as integer = lbVersions.ListIndex
+		  dim curIndex as integer = lbVersions.SelectedRowIndex
 		  if curIndex = -1 then
 		    return
 		  end if
 		  
 		  StoreFieldsToVersionRow()
 		  
-		  dim tag as Variant = lbVersions.RowTag( curIndex )
+		  dim tag as Variant = lbVersions.RowTagAt( curIndex )
 		  dim infoCopy as new Kaju.UpdateInformation( Kaju.UpdateInformation( tag ) )
 		  MyKajuFile.KajuData.Append infoCopy
 		  
-		  dim listing as string = lbVersions.Cell( curIndex, 0 )
+		  dim listing as string = lbVersions.CellTextAt( curIndex, 0 )
 		  dim newIndex as integer = curIndex + 1
-		  lbVersions.InsertRow( newIndex, listing )
-		  lbVersions.RowTag( newIndex ) = infoCopy
-		  lbVersions.ListIndex = newIndex
+		  lbVersions.AddRowAt( newIndex, listing )
+		  lbVersions.RowTagAt( newIndex ) = infoCopy
+		  lbVersions.SelectedRowIndex = newIndex
 		  
 		  
 		End Sub
@@ -2006,18 +2022,18 @@ End
 		  
 		  dim r as boolean = true // Assume it's fine
 		  
-		  if lbVersions.ListCount = 0 then
+		  if lbVersions.RowCount = 0 then
 		    return r
 		  end if
 		  
 		  dim msg as string
-		  dim lastRow as integer = lbVersions.ListCount - 1
+		  dim lastRow as integer = lbVersions.RowCount - 1
 		  for row as integer = 0 to lastRow
-		    dim u as Kaju.UpdateInformation = lbVersions.RowTag( row )
+		    dim u as Kaju.UpdateInformation = lbVersions.RowTagAt( row )
 		    if not u.IsValid then
 		      r = false
 		      msg = u.InvalidReason
-		      lbVersions.ListIndex = row
+		      lbVersions.SelectedRowIndex = row
 		      exit for row
 		    end if
 		  next
@@ -2046,11 +2062,11 @@ End
 		  
 		  lbVersions.AddRow "1.0.0d1"
 		  dim version as new Kaju.UpdateInformation
-		  version.Version = lbVersions.Cell( lbVersions.LastIndex, 0 )
+		  version.Version = lbVersions.CellTextAt( lbVersions.LastRowIndex, 0 )
 		  
 		  dim prevIndex as integer = LastVersionRow
-		  if prevIndex <> -1 and prevIndex < lbVersions.ListCount then
-		    dim prevItem as Kaju.UpdateInformation = lbVersions.RowTag( prevIndex )
+		  if prevIndex <> -1 and prevIndex < lbVersions.RowCount then
+		    dim prevItem as Kaju.UpdateInformation = lbVersions.RowTagAt( prevIndex )
 		    if prevItem <> nil then
 		      version.AppName = prevItem.AppName
 		    end if
@@ -2058,9 +2074,9 @@ End
 		  
 		  MyKajuFile.KajuData.Append version
 		  
-		  lbVersions.RowTag( lbVersions.LastIndex ) = version
-		  lbVersions.ListIndex = lbVersions.LastIndex
-		  self.ContentsChanged = true
+		  lbVersions.RowTagAt( lbVersions.LastRowIndex ) = version
+		  lbVersions.SelectedRowIndex = lbVersions.LastRowIndex
+		  self.Changed = true
 		End Sub
 	#tag EndMethod
 
@@ -2075,15 +2091,15 @@ End
 		  for i as integer = 0 to versions.Ubound
 		    dim version as Kaju.UpdateInformation = versions( i )
 		    lbVersions.AddRow version.Version
-		    lbVersions.RowTag( lbVersions.LastIndex ) = version
+		    lbVersions.RowTagAt( lbVersions.LastRowIndex ) = version
 		  next i
 		  
-		  if lbVersions.ListCount <> 0 then
-		    lbVersions.ListIndex = 0
+		  if lbVersions.RowCount <> 0 then
+		    lbVersions.SelectedRowIndex = 0
 		  end if
 		  
 		  Document = f
-		  self.ContentsChanged = false
+		  self.Changed = false
 		  
 		  AdjustControls
 		  
@@ -2111,28 +2127,37 @@ End
 		  mdlg.Explanation = err.Message
 		  mdlg.CancelButton.Visible = false
 		  
-		  call mdlg.ShowModalWithin self
+		  call mdlg.ShowModal self
 		  
 		End Sub
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
 		Private Sub StoreFieldsToVersionRow()
-		  if LastVersionRow = -1 or LastVersionRow >= lbVersions.ListCount then
+		  if LastVersionRow = -1 or LastVersionRow >= lbVersions.RowCount then
 		    return
 		  end if
 		  
-		  dim version as Kaju.UpdateInformation = lbVersions.RowTag( LastVersionRow )
+		  dim version as Kaju.UpdateInformation = lbVersions.RowTagAt( LastVersionRow )
 		  
 		  //
 		  // Gather the textfield data first
 		  //
 		  
-		  dim lastIndex as integer = ControlCount - 1
-		  for i as integer = 0 to lastIndex
-		    dim c as Control = self.Control( i )
+		  Dim lastIndex As Integer = ControlCount - 1
+		  
+		  For i As Integer = 0 To lastIndex
 		    
-		    dim fieldName as string = ControlDataField( c )
+		    Dim o As Object = Self.ControlAt( i )
+		    
+		    If Not ( o IsA DesktopControl ) Then
+		      Continue
+		    End If
+		    
+		    Var c As DesktopControl = DesktopControl( o )
+		    
+		    Dim fieldName As String = ControlDataField( c )
+		    
 		    if fieldName <> "" then
 		      dim value as Variant = ControlValue( c )
 		      version.SetByName( fieldName ) = value
@@ -2184,7 +2209,7 @@ End
 		  // Handle the named controls first
 		  //
 		  
-		  dim savedDirty as boolean = self.ContentsChanged
+		  dim savedDirty as boolean = self.Changed
 		  
 		  ClearFields()
 		  
@@ -2192,7 +2217,14 @@ End
 		  
 		  dim lastIndex as integer = ControlCount - 1
 		  for i as integer = 0 to lastIndex
-		    dim c as Control = self.Control( i )
+		    
+		    Dim o As Object = Self.ControlAt( i )
+		    
+		    If Not ( o IsA DesktopControl ) Then
+		      Continue
+		    End If
+		    
+		    Var c As DesktopControl = DesktopControl( o )
 		    
 		    dim fieldName as string = ControlDataField( c )
 		    if fieldName <> "" then
@@ -2218,7 +2250,7 @@ End
 		  self.Loading = false
 		  
 		  AdjustControls()
-		  self.ContentsChanged = savedDirty
+		  self.Changed = savedDirty
 		End Sub
 	#tag EndMethod
 
@@ -2300,12 +2332,13 @@ End
 
 #tag Events lbVersions
 	#tag Event
-		Sub Change()
+		Sub SelectionChanged()
 		  StoreFieldsToVersionRow
 		  
-		  dim row as integer = me.ListIndex
-		  if row <> -1 and me.RowTag( row ) <> nil then
-		    VersionToFields( me.RowTag( row ) )
+		  Dim row As Integer = Me.SelectedRowIndex
+		  
+		  if row <> -1 and me.RowTagAt( row ) <> nil then
+		    VersionToFields( me.RowTagAt( row ) )
 		  else
 		    ClearFields
 		  end if
@@ -2318,7 +2351,7 @@ End
 #tag EndEvents
 #tag Events btnNew
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  NewVersion
 		  
 		End Sub
@@ -2326,7 +2359,7 @@ End
 #tag EndEvents
 #tag Events btnDelete
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  DeleteVersion
 		End Sub
 	#tag EndEvent
@@ -2334,40 +2367,42 @@ End
 #tag Events fldVersion
 	#tag Event
 		Sub TextChange()
-		  if lbVersions.ListIndex = -1 then
-		    return
-		  end if
+		  If lbVersions.SelectedRowIndex = -1 Then
+		    Return
+		  End If
 		  
-		  dim v as string = me.Text.Trim
-		  if v = "" then
+		  Dim v As String = Me.Text.Trim
+		  If v = "" Then
 		    v = "(no version)"
-		  end if
+		  End If
 		  
-		  lbVersions.Cell( lbVersions.ListIndex, 0 ) = v
+		  lbVersions.CellTextAt( lbVersions.SelectedRowIndex, 0 ) = v
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events fldReleaseNotes
 	#tag Event
 		Sub TextChange()
-		  objReleaseNotesProcessor.ReleaseNotes = me.Text
+		  objReleaseNotesProcessor.ReleaseNotes = Me.Text
 		  tmrUpdateReleaseNotesPreview.Mode = Timer.ModeSingle
 		  tmrUpdateReleaseNotesPreview.Reset
 		  
-		  #if TargetWindows then
-		    hvReleaseNotesPreview.LoadPage( kNoDataHTML, nil )
+		  #If TargetWindows Then
+		    hvReleaseNotesPreview.LoadPage( kNoDataHTML, Nil )
 		    
-		    dim releaseNotes as string = ControlValue( fldReleaseNotes ).StringValue
-		    hvReleaseNotesPreview.LoadPage releaseNotes, nil
-		    me.SetFocus
-		  #endif
+		    Dim releaseNotes As String = ControlValue( fldReleaseNotes ).StringValue
+		    hvReleaseNotesPreview.LoadPage releaseNotes, Nil
+		    Me.SetFocus
+		  #EndIf
 		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events hvReleaseNotesPreview
 	#tag Event
-		Function NewWindow() As HTMLViewer
+		Function NewWindow(url as String) As DesktopHTMLViewer
+		  #Pragma Unused url 
+		  
 		  return hvNewWindow
 		End Function
 	#tag EndEvent
@@ -2386,9 +2421,8 @@ End
 		End Sub
 	#tag EndEvent
 	#tag Event
-		Sub Error(errorNumber as Integer, errorMessage as String)
-		  #pragma unused errorNumber
-		  #pragma unused errorMessage
+		Sub Error(error As RuntimeException)
+		  #pragma unused Error
 		  
 		  break
 		End Sub
@@ -2400,15 +2434,17 @@ End
 		  tmrUpdateImagePreview.Mode = Timer.ModeSingle
 		  tmrUpdateImagePreview.Reset
 		  
-		  #if TargetWindows then
-		    hvImagePreview.LoadPage kNoDataHTML, nil
+		  #If TargetWindows Then
+		    hvImagePreview.LoadPage kNoDataHTML, Nil
 		  #endif
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events hvImagePreview
 	#tag Event
-		Function NewWindow() As HTMLViewer
+		Function NewWindow(url as String) As DesktopHTMLViewer
+		  #Pragma Unused url
+		  
 		  return hvNewWindow
 		End Function
 	#tag EndEvent
@@ -2427,9 +2463,8 @@ End
 		End Sub
 	#tag EndEvent
 	#tag Event
-		Sub Error(errorNumber as Integer, errorMessage as String)
-		  #pragma unused errorNumber
-		  #pragma unused errorMessage
+		Sub Error(error As RuntimeException)
+		  #Pragma unused Error
 		  
 		  break
 		End Sub
@@ -2437,7 +2472,7 @@ End
 #tag EndEvents
 #tag Events btnStyle
 	#tag Event
-		Sub Action(index as Integer)
+		Sub Pressed(index as Integer)
 		  dim tag as string = me.Caption
 		  ApplyStyle( tag )
 		  
@@ -2447,14 +2482,14 @@ End
 #tag EndEvents
 #tag Events btnBreak
 	#tag Event
-		Sub Action()
-		  fldReleaseNotes.SelText = "<br />" + EndOfLine
+		Sub Pressed()
+		  fldReleaseNotes.SelectedText = "<br />" + EndOfLine
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events btnList
 	#tag Event
-		Sub Action(index as Integer)
+		Sub Pressed(index as Integer)
 		  dim tag as string = me.Caption
 		  ApplyStyle( tag, true )
 		  
@@ -2464,7 +2499,7 @@ End
 #tag EndEvents
 #tag Events cbPre2Preview
 	#tag Event
-		Sub Action()
+		Sub ValueChanged()
 		  tmrUpdateReleaseNotesPreview.Mode = Timer.ModeSingle
 		  tmrUpdateReleaseNotesPreview.Reset
 		End Sub
@@ -2490,7 +2525,7 @@ End
 		    releaseNotes = objReleaseNotesProcessor.DisplayReleaseNotes
 		  end if
 		  
-		  dim saveControl as RectControl = self.Focus
+		  dim saveControl as DesktopUIControl = self.Focus
 		  hvReleaseNotesPreview.LoadPage( releaseNotes, nil )
 		  self.Focus = saveControl
 		  //
@@ -2502,7 +2537,7 @@ End
 #tag EndEvents
 #tag Events btnCopyPublicKey
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  
 		  dim c as new Clipboard
 		  c.Text = MyKajuFile.PublicKey
@@ -2526,17 +2561,17 @@ End
 #tag EndEvents
 #tag Events btnExport
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  if not IsDataValid() then
 		    return
 		  end if
 		  
-		  dim dlg as new SaveAsDialog
+		  dim dlg as new SaveFileDialog
 		  dlg.PromptText = "Export the file that will be served to your app through your web site:"
 		  dlg.ActionButtonCaption = "Export"
 		  dlg.SuggestedFileName = MyKajuFile.ExportFilename
 		  
-		  dim f as FolderItem = dlg.ShowModalWithin( self )
+		  dim f as FolderItem = dlg.ShowModal( self )
 		  if f is nil then
 		    return
 		  end if
@@ -2559,38 +2594,40 @@ End
 #tag EndEvents
 #tag Events btnDuplicate
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  DuplicateVersion
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events btnPreview
 	#tag Event
-		Sub Open()
+		Sub Opening()
 		  me.AddRow "Development"
 		  me.AddRow "Alpha"
 		  me.AddRow "Beta"
 		  me.AddRow "Final"
 		  
-		  me.MenuValue = -1
+		  me.SelectedRowIndex = -1
 		End Sub
 	#tag EndEvent
 	#tag Event
-		Sub Action()
-		  if me.MenuValue = -1 then
-		    return
-		  end if
+		Sub SelectionChanged(item As DesktopMenuItem)
+		  #Pragma Unused item
 		  
-		  if not IsDataValid then
-		    return
-		  end if
+		  If Me.SelectedRowIndex = -1 Then
+		    Return
+		  End If
 		  
-		  dim uc as new Kaju.UpdateChecker( App.PrefFolder )
-		  uc.AllowedStage = me.MenuValue
-		  dim s as string = MyKajuFile.DataToJSON.ToString
+		  If Not IsDataValid Then
+		    Return
+		  End If
+		  
+		  Dim uc As New Kaju.UpdateChecker( App.PrefFolder )
+		  uc.AllowedStage = Me.SelectedRowIndex
+		  Dim s As String = MyKajuFile.DataToJSON.ToString
 		  uc.TestUpdate( s )
 		  
-		  me.MenuValue = -1
+		  me.SelectedRowIndex = -1
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -2611,6 +2648,14 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="HasTitleBar"
+		Visible=true
+		Group="Frame"
+		InitialValue="True"
+		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="MinimumWidth"
 		Visible=true
@@ -2660,8 +2705,7 @@ End
 			"6 - Rounded Window"
 			"7 - Global Floating Window"
 			"8 - Sheet Window"
-			"9 - Metal Window"
-			"11 - Modeless Dialog"
+			"9 - Modeless Dialog"
 		#tag EndEnumValues
 	#tag EndViewProperty
 	#tag ViewProperty
@@ -2724,8 +2768,8 @@ End
 		Visible=true
 		Group="Background"
 		InitialValue="&hFFFFFF"
-		Type="Color"
-		EditorType="Color"
+		Type="ColorGroup"
+		EditorType="ColorGroup"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Backdrop"
@@ -2796,7 +2840,7 @@ End
 		Visible=true
 		Group="Appearance"
 		InitialValue=""
-		Type="MenuBar"
+		Type="DesktopMenuBar"
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty

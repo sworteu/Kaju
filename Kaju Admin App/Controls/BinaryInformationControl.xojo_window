@@ -1,16 +1,16 @@
-#tag Window
-Begin ContainerControl BinaryInformationControl
-   AcceptFocus     =   False
-   AcceptTabs      =   True
-   AutoDeactivate  =   True
-   BackColor       =   &cFFFFFF00
+#tag DesktopWindow
+Begin DesktopContainer BinaryInformationControl
+   AllowAutoDeactivate=   True
+   AllowFocus      =   False
+   AllowFocusRing  =   False
+   AllowTabs       =   True
    Backdrop        =   0
-   DoubleBuffer    =   False
+   BackgroundColor =   &cFFFFFF00
+   Composited      =   False
    Enabled         =   True
-   EraseBackground =   True
-   HasBackColor    =   False
+   HasBackgroundColor=   False
    Height          =   130
-   HelpTag         =   ""
+   Index           =   -2147483648
    InitialParent   =   ""
    Left            =   0
    LockBottom      =   False
@@ -20,21 +20,22 @@ Begin ContainerControl BinaryInformationControl
    TabIndex        =   0
    TabPanelIndex   =   0
    TabStop         =   True
+   Tooltip         =   ""
    Top             =   0
    Transparent     =   True
-   UseFocusRing    =   False
    Visible         =   True
    Width           =   630
-   Begin PushButton btnHashFromURL
-      AutoDeactivate  =   True
+   Begin DesktopButton btnHashFromURL
+      AllowAutoDeactivate=   True
       Bold            =   False
-      ButtonStyle     =   0
       Cancel          =   False
       Caption         =   "From URL"
       Default         =   False
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -44,13 +45,12 @@ Begin ContainerControl BinaryInformationControl
       LockLeft        =   False
       LockRight       =   True
       LockTop         =   True
+      MacButtonStyle  =   0
       Scope           =   2
       TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   True
-      TextFont        =   "SmallSystem"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   66
       Transparent     =   False
       Underline       =   False
@@ -58,14 +58,14 @@ Begin ContainerControl BinaryInformationControl
       Width           =   80
    End
    Begin CheckBoxChanger cbUseBinary
-      AutoDeactivate  =   True
+      AllowAutoDeactivate=   True
       Bold            =   False
       Caption         =   "Use"
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   False
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -76,45 +76,42 @@ Begin ContainerControl BinaryInformationControl
       LockRight       =   False
       LockTop         =   True
       Scope           =   2
-      State           =   0
       TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   0
       Transparent     =   False
       Underline       =   False
       Value           =   False
       Visible         =   True
+      VisualState     =   0
       Width           =   100
    End
    Begin TextFieldChanger fldHash
-      AcceptTabs      =   False
-      Alignment       =   0
-      AutoDeactivate  =   True
-      AutomaticallyCheckSpelling=   False
-      BackColor       =   &cFFFFFF00
+      AllowAutoDeactivate=   True
+      AllowFocusRing  =   True
+      AllowSpellChecking=   False
+      AllowTabs       =   False
+      BackgroundColor =   &cFFFFFF
       Bold            =   False
-      Border          =   True
-      CueText         =   "Drop the Zip file here to calculate the hash"
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Format          =   ""
+      HasBorder       =   True
       Height          =   22
-      HelpTag         =   ""
+      Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
       Left            =   149
-      LimitText       =   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   True
       LockTop         =   True
-      Mask            =   ""
+      MaximumCharactersAllowed=   0
       Password        =   False
       ReadOnly        =   True
       Scope           =   2
@@ -122,42 +119,40 @@ Begin ContainerControl BinaryInformationControl
       TabPanelIndex   =   0
       TabStop         =   False
       Text            =   ""
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   66
       Transparent     =   False
       Underline       =   False
-      UseFocusRing    =   True
+      ValidationMask  =   ""
       Visible         =   False
       Width           =   350
    End
    Begin TextFieldChanger fldURL
-      AcceptTabs      =   False
-      Alignment       =   0
-      AutoDeactivate  =   True
-      AutomaticallyCheckSpelling=   False
-      BackColor       =   &cFFFFFF00
+      AllowAutoDeactivate=   True
+      AllowFocusRing  =   True
+      AllowSpellChecking=   False
+      AllowTabs       =   False
+      BackgroundColor =   &cFFFFFF
       Bold            =   False
-      Border          =   True
-      CueText         =   ""
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Format          =   ""
+      HasBorder       =   True
       Height          =   22
-      HelpTag         =   ""
+      Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
       Left            =   149
-      LimitText       =   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   True
       LockTop         =   True
-      Mask            =   ""
+      MaximumCharactersAllowed=   0
       Password        =   False
       ReadOnly        =   False
       Scope           =   2
@@ -165,25 +160,24 @@ Begin ContainerControl BinaryInformationControl
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   ""
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   100
       Transparent     =   False
       Underline       =   False
-      UseFocusRing    =   True
+      ValidationMask  =   ""
       Visible         =   False
       Width           =   470
    End
-   Begin Label lblHash
-      AutoDeactivate  =   True
+   Begin DesktopLabel lblHash
+      AllowAutoDeactivate=   True
       Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -200,25 +194,23 @@ Begin ContainerControl BinaryInformationControl
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "Hash:"
-      TextAlign       =   0
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   67
       Transparent     =   False
       Underline       =   False
       Visible         =   False
       Width           =   97
    End
-   Begin Label lblURL
-      AutoDeactivate  =   True
+   Begin DesktopLabel lblURL
+      AllowAutoDeactivate=   True
       Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -235,11 +227,9 @@ Begin ContainerControl BinaryInformationControl
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "URL:"
-      TextAlign       =   0
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   101
       Transparent     =   False
       Underline       =   False
@@ -247,30 +237,29 @@ Begin ContainerControl BinaryInformationControl
       Width           =   97
    End
    Begin TextFieldChanger fldExecutable
-      AcceptTabs      =   False
-      Alignment       =   0
-      AutoDeactivate  =   True
-      AutomaticallyCheckSpelling=   False
-      BackColor       =   &cFFFFFF00
+      AllowAutoDeactivate=   True
+      AllowFocusRing  =   True
+      AllowSpellChecking=   False
+      AllowTabs       =   False
+      BackgroundColor =   &cFFFFFF
       Bold            =   False
-      Border          =   True
-      CueText         =   ""
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Format          =   ""
+      HasBorder       =   True
       Height          =   22
-      HelpTag         =   ""
+      Hint            =   ""
       Index           =   -2147483648
       Italic          =   False
       Left            =   149
-      LimitText       =   0
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   True
       LockTop         =   True
-      Mask            =   ""
+      MaximumCharactersAllowed=   0
       Password        =   False
       ReadOnly        =   False
       Scope           =   2
@@ -278,25 +267,24 @@ Begin ContainerControl BinaryInformationControl
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   ""
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   32
       Transparent     =   False
       Underline       =   False
-      UseFocusRing    =   True
+      ValidationMask  =   ""
       Visible         =   False
       Width           =   470
    End
-   Begin Label lblExecutable
-      AutoDeactivate  =   True
+   Begin DesktopLabel lblExecutable
+      AllowAutoDeactivate=   True
       Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
       Enabled         =   True
+      FontName        =   "System"
+      FontSize        =   0.0
+      FontUnit        =   0
       Height          =   20
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
@@ -313,11 +301,9 @@ Begin ContainerControl BinaryInformationControl
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "Executable:"
-      TextAlign       =   0
+      TextAlignment   =   0
       TextColor       =   &c00000000
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
+      Tooltip         =   ""
       Top             =   33
       Transparent     =   True
       Underline       =   False
@@ -325,11 +311,11 @@ Begin ContainerControl BinaryInformationControl
       Width           =   97
    End
 End
-#tag EndWindow
+#tag EndDesktopWindow
 
 #tag WindowCode
 	#tag Event
-		Sub Open()
+		Sub Opening()
 		  //
 		  // Hide the Executable if we don't need it
 		  //
@@ -371,16 +357,24 @@ End
 		  
 		  dim lastControlIndex as integer = self.ControlCount - 1
 		  for i as integer = 0 to lastControlIndex
-		    dim c as Control = self.Control( i )
+		    
+		    Var o As Object = Self.ControlAt( i )
+		    
+		    If Not ( o IsA DesktopUIControl ) Then
+		      Continue
+		    End If
+		    
+		    Var c As DesktopUIControl = DesktopUIControl( o )
+		    
 		    select case c
-		    case isa CheckBox
-		      CheckBox( c ).Enabled = self.Enabled
+		    case isa DesktopCheckBox
+		      DesktopCheckBox( c ).Enabled = self.Enabled
 		      
-		    case isa RectControl
+		    case isa DesktopUIControl
 		      if c is fldExecutable and not NeedsExecutableName then
 		        fldExecutable.Visible = false
 		      else
-		        RectControl( c ).Visible = isVisible
+		        DesktopUIControl( c ).Visible = isVisible
 		      end if
 		      
 		    end select
@@ -418,7 +412,7 @@ End
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Sub HashFromURL(url As String, version As String, hashField As TextField)
+		Private Sub HashFromURL(url As String, version As String, hashField As DesktopTextField)
 		  url = url.Trim
 		  url = KajuFile.InsertVersion( url, version )
 		  
@@ -518,7 +512,7 @@ End
 
 #tag Events btnHashFromURL
 	#tag Event
-		Sub Action()
+		Sub Pressed()
 		  HashFromURL( fldURL.Text, Version, fldHash )
 		End Sub
 	#tag EndEvent
@@ -534,7 +528,7 @@ End
 #tag EndEvents
 #tag Events fldHash
 	#tag Event
-		Sub DropObject(obj As DragItem, action As Integer)
+		Sub DropObject(obj As DragItem, action As DragItem.Types)
 		  if obj.FolderItemAvailable then
 		    dim f as FolderItem = obj.FolderItem
 		    me.Text = Kaju.HashOfFile( f )
@@ -544,7 +538,7 @@ End
 		End Sub
 	#tag EndEvent
 	#tag Event
-		Sub Open()
+		Sub Opening()
 		  me.AcceptFileDrop( FileTypes1.ApplicationZip )
 		End Sub
 	#tag EndEvent
@@ -557,6 +551,22 @@ End
 	#tag EndEvent
 #tag EndEvents
 #tag ViewBehavior
+	#tag ViewProperty
+		Name="Composited"
+		Visible=true
+		Group="Window Behavior"
+		InitialValue="False"
+		Type="Boolean"
+		EditorType=""
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="Index"
+		Visible=true
+		Group="ID"
+		InitialValue="-2147483648"
+		Type="Integer"
+		EditorType=""
+	#tag EndViewProperty
 	#tag ViewProperty
 		Name="AllowAutoDeactivate"
 		Visible=true
@@ -586,8 +596,8 @@ End
 		Visible=true
 		Group="Background"
 		InitialValue="&hFFFFFF"
-		Type="Color"
-		EditorType="Color"
+		Type="ColorGroup"
+		EditorType="ColorGroup"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="HasBackgroundColor"
@@ -614,14 +624,6 @@ End
 		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
-		Name="DoubleBuffer"
-		Visible=true
-		Group="Windows Behavior"
-		InitialValue="False"
-		Type="Boolean"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
 		Name="Backdrop"
 		Visible=true
 		Group="Background"
@@ -641,14 +643,6 @@ End
 		Name="Enabled"
 		Visible=true
 		Group="Appearance"
-		InitialValue="True"
-		Type="Boolean"
-		EditorType=""
-	#tag EndViewProperty
-	#tag ViewProperty
-		Name="EraseBackground"
-		Visible=true
-		Group="Behavior"
 		InitialValue="True"
 		Type="Boolean"
 		EditorType=""

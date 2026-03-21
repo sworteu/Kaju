@@ -1,9 +1,11 @@
 #tag Class
 Protected Class TextAreaChanger
-Inherits TextArea
+Inherits DesktopTextArea
 	#tag Event
-		Sub TextChange()
-		  self.TrueWindow.ContentsChanged = true
+		Sub TextChanged()
+		  
+		  self.Window.Changed = true
+		  
 		  RaiseEvent TextChange()
 		End Sub
 	#tag EndEvent
@@ -28,7 +30,7 @@ Inherits TextArea
 			Visible=true
 			Group="Selection Behavior"
 			InitialValue="0"
-			Type="TextArea.UnicodeModes"
+			Type="DesktopTextArea.UnicodeModes"
 			EditorType="Enum"
 			#tag EnumValues
 				"0 - Native"
@@ -49,8 +51,8 @@ Inherits TextArea
 			Visible=true
 			Group="Appearance"
 			InitialValue="&hFFFFFF"
-			Type="Color"
-			EditorType="Color"
+			Type="ColorGroup"
+			EditorType="ColorGroup"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="HasBorder"
@@ -166,7 +168,7 @@ Inherits TextArea
 			Visible=true
 			Group="Behavior"
 			InitialValue="True"
-			Type="boolean"
+			Type="Boolean"
 			EditorType=""
 		#tag EndViewProperty
 		#tag ViewProperty
@@ -192,22 +194,6 @@ Inherits TextArea
 			InitialValue=""
 			Type="Boolean"
 			EditorType=""
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="DataField"
-			Visible=true
-			Group="Database Binding"
-			InitialValue=""
-			Type="String"
-			EditorType="DataField"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="DataSource"
-			Visible=true
-			Group="Database Binding"
-			InitialValue=""
-			Type="String"
-			EditorType="DataSource"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Enabled"
@@ -374,8 +360,8 @@ Inherits TextArea
 			Visible=true
 			Group="Appearance"
 			InitialValue="&h000000"
-			Type="Color"
-			EditorType="Color"
+			Type="ColorGroup"
+			EditorType="ColorGroup"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Top"

@@ -22,9 +22,10 @@ Protected Class KajuFile
 		Sub ExportTo(fileOrFolder As FolderItem)
 		  Validate()
 		  
+		  Var opts As New JSONOptions
+		  opts.Compact = False
+		  
 		  dim data as JSONItem = DataToJSON
-		  data.Compact = false
-		  data.EscapeSlashes = false
 		  
 		  //
 		  // Perform $VERSION$ substitutions and add security token
@@ -45,7 +46,7 @@ Protected Class KajuFile
 		    next
 		  next
 		  
-		  dim dataString as string = data.ToString
+		  dim dataString as string = data.ToString( opts )
 		  
 		  dim sig as string = Crypto.RSASign( dataString, PrivateKey )
 		  sig = EncodeHex( sig )

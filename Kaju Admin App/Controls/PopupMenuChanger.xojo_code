@@ -1,9 +1,12 @@
 #tag Class
 Protected Class PopupMenuChanger
-Inherits PopupMenu
+Inherits DesktopPopupMenu
 	#tag Event
-		Sub Change()
-		  self.TrueWindow.ContentsChanged = true
+		Sub SelectionChanged(item As DesktopMenuItem)
+		  #Pragma Unused item
+		  
+		  self.Window.Changed = true
+		  
 		  RaiseEvent Change()
 		  
 		End Sub
@@ -237,30 +240,6 @@ Inherits PopupMenu
 			Group="Font"
 			InitialValue=""
 			Type="Boolean"
-			EditorType=""
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="DataSource"
-			Visible=true
-			Group="Database Binding"
-			InitialValue=""
-			Type="String"
-			EditorType="DataSource"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="DataField"
-			Visible=true
-			Group="Database Binding"
-			InitialValue=""
-			Type="String"
-			EditorType="DataField"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="InitialParent"
-			Visible=false
-			Group=""
-			InitialValue=""
-			Type="String"
 			EditorType=""
 		#tag EndViewProperty
 	#tag EndViewBehavior

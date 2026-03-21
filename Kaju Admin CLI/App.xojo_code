@@ -135,7 +135,7 @@ Inherits ConsoleApplication
 		  next
 		  subAppNames.SortWith subAppDescriptions
 		  
-		  print LongVersion
+		  print Version
 		  print ""
 		  print "Usage: " + kAppName + " [global-parameters] app-key [parameters]"
 		  print ""
@@ -169,7 +169,7 @@ Inherits ConsoleApplication
 		    end if
 		  end if
 		  
-		  print LongVersion
+		  print Version
 		  print ""
 		  print "Usage:"
 		  print "  " + kAppName + " --file /path/to/admin/file " + _

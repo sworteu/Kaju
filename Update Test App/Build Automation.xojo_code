@@ -4,6 +4,8 @@
 				End
 				Begin ExternalIDEScriptStep PrepareKajuLinux
 					AppliesTo = 2
+					Architecture = 0
+					Target = 0
 					FolderItem = Li4AQnVpbGQgU2NyaXB0cwBQcmVwYXJlIEthanUueG9qb19zY3JpcHQ=
 				End
 			End
@@ -12,7 +14,12 @@
 				End
 				Begin ExternalIDEScriptStep PrepareKajuMac
 					AppliesTo = 2
+					Architecture = 0
+					Target = 0
 					FolderItem = Li4AQnVpbGQgU2NyaXB0cwBQcmVwYXJlIEthanUueG9qb19zY3JpcHQ=
+				End
+				Begin SignProjectStep Sign
+				  DeveloperID=
 				End
 			End
 			Begin BuildStepList Windows
@@ -20,6 +27,8 @@
 				End
 				Begin ExternalIDEScriptStep PrepareKajuWin
 					AppliesTo = 2
+					Architecture = 0
+					Target = 0
 					FolderItem = Li4AQnVpbGQgU2NyaXB0cwBQcmVwYXJlIEthanUueG9qb19zY3JpcHQ=
 				End
 			End

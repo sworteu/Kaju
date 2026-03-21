@@ -8,8 +8,8 @@ Inherits URLConnection
 		  end if
 		  
 		  if Username <> "" then
-		    name = Username.ToText
-		    password = self.Password.ToText
+		    name = Username
+		    password = Self.Password
 		    return true
 		  else
 		    return false
@@ -174,6 +174,14 @@ Inherits URLConnection
 
 
 	#tag ViewBehavior
+		#tag ViewProperty
+			Name="FollowRedirects"
+			Visible=false
+			Group="Behavior"
+			InitialValue=""
+			Type="Boolean"
+			EditorType=""
+		#tag EndViewProperty
 		#tag ViewProperty
 			Name="AllowCertificateValidation"
 			Visible=false
